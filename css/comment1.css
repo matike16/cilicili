@@ -1,0 +1,152 @@
+/* 版心导航栏 */
+
+.edition-heart{
+    width:85%;
+    height:120px;
+}
+
+.edition-heart-left{
+    float: left;
+    width:15%;
+    height:120px;
+    padding:20px 20px 20px 0;
+}
+
+.edition-heart-center{
+    float: left;
+    width:70%;
+    height:120px;
+    padding: 20px  0  20px  20px;
+}
+
+.edition-heart-right{
+    float: left;
+    width:15%;
+    height:120px;
+    padding:20px 0 20px 20px;
+}
+
+/* 左侧 */
+.heartleftcard{
+    float: left;
+    width: 50px;
+    height: 80px;
+    margin-right: 27px;
+}
+
+.heartleftcard:last-child{
+    margin-right: 0;
+}
+
+.heartleftcardtop{
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.heartleftcard .top1{
+    background-color: #ff9212;
+    font-weight: 800;
+    transition:all .3s;
+}
+
+.heartleftcard .top1:hover{
+    background-color: #ff9e2c;
+}
+
+.heartleftcard .top2{
+    background-color: #f07775;
+    transition: all .3s;
+}
+
+.heartleftcard .top2:hover{
+    background-color: #f38e8c;
+}
+
+.heartleftcard .top3{
+    background-color: #59ca73;
+    transition: all .3s;
+}
+
+.heartleftcard .top3:hover{
+    background-color: #6cd083;
+}
+
+.heartleftcard .iconfont{
+    font-size: 25px;
+}
+
+.heartleftcardfooter{
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+}
+
+/*  中心 */
+
+.heartcenter{
+    width:auto;
+    height:80px;
+    border-right: 1px solid #e3e5e7;
+}
+
+.heartcenter a{
+    color:#61666d;
+}
+
+.centerbar{
+    float: left;
+    width:  85px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 14px;
+    margin-right:6px;
+    margin-bottom:10px;
+    border-radius: 5px;
+    background-color: #f6f7f8;
+    transition: all  .3s;
+}
+
+.centerbar:hover{
+    background-color: #e2e4e6;
+}
+
+.centerbarlast{
+    margin: auto  0;
+    float: right;
+    margin-right:15px;
+    transition: all .3s;
+}
+
+.centerbar24:hover .centerbarlast{
+    transform: rotate(180deg);
+}
+
+/* 右侧 */
+.edition-heart-right a{
+    color:#61666d;
+    transition:all .3s;
+}
+
+.edition-heart-right a:hover{
+    color: blueviolet;
+}
+
+.rightbar{
+    float: left;
+    width: 70px;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom:10px;
+}
+
+.rightbar .iconfont{
+    font-size: 14px;
+}

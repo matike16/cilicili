@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>密码图片更换</title>
+    <style>
+        .logininput {
+            position: relative;
+        }
+
+        .toggle-icon {
+            color: #00a1d6;
+            cursor: pointer;
+        }
+
+        .imgleft,
+        .imgright {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logininput logininput2">
+        密码
+        <input type="password" id="password" placeholder="请输入密码">
+        <span id="forgot-password" class="toggle-icon">忘记密码？</span>
+    </div>
+    <img src="../images/logincartoonleft.png" id="left-image" class="imgleft">
+    <img src="../images/logincartoonright.png" id="right-image" class="imgright">
+
+    <script>
+        var passwordInput = document.getElementById("password");
+        var leftImage = document.getElementById("left-image");
+        var rightImage = document.getElementById("right-image");
+
+        passwordInput.addEventListener("focus", function () {
+            leftImage.src = "../images/logincartoonleft1.png";
+            rightImage.src = "../images/logincartoonright1.png";
+        });
+
+        passwordInput.addEventListener("blur", function () {
+            leftImage.src = "../images/logincartoonleft.png";
+            rightImage.src = "../images/logincartoonright.png";
+        });
+
+
+    </script>
+</body>
+
+</html>

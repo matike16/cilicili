@@ -1,0 +1,88 @@
+
+.body_top {
+    float: left;
+    overflow: hidden;
+    width: 640px;
+    height: 444px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.picbox {
+    display: flex;
+    width: 100%;
+    height: 362px;
+    /* overflow: hidden; */
+    transition: transform 0.5s ease-in-out;
+}
+.picbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom-box {
+    color: #fff;
+    width: 100%;
+    height: 83px;
+    background: #1f160d;
+    position: relative;
+    border: 1px dashed transparent;
+}
+.linear{
+    position: absolute;
+    top: -50px;
+    background:linear-gradient(to top,#1f160d, transparent);
+    width: 100%;
+    height: 50px;
+
+} 
+.left {
+  width: fit-content;
+  margin: 10px 0 0 10px;
+  font-size: 18px;
+}
+.dots {
+  margin-top: 10px;
+  height: 20px;
+}
+.dot {
+  cursor: pointer;
+  width: 9px;
+  height: 9px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+.right {
+  width: fit-content;
+  height: 36px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.before,
+.next {
+    display: inline-block;
+    border: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-weight: 800;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.before:hover,.next:hover{
+    background-color: rgba(255,255,255,.3);
+}
+.before:active,.next:active{
+    animation: turn-small 1s ease-out;
+}
+@keyframes turn-small{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>密码显示与关闭</title>
+    <style>
+        .password-input {
+            position: relative;
+        }
+
+        .toggle-icon {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="password-input">
+        <input type="password" id="password" placeholder="输入密码">
+        <span id="toggle-icon" class="toggle-icon"></span>
+    </div>
+
+    <script>
+        document.getElementById("toggle-icon").addEventListener("click", function () {
+            var passwordInput = document.getElementById("password");
+            var toggleIcon = document.getElementById("toggle-icon");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.textContent = "隐藏密码";
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.textContent = "显示密码";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录</title>
+    <style>
+        .loginmeg {
+            margin-bottom: 10px;
+        }
+
+        .logininput {
+            margin-bottom: 10px;
+        }
+
+        .buttonset,
+        .buttonlogin {
+            padding: 10px;
+            background-color: #00a1d6;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loginmeg">
+        <div class="logininput logininput1">账号<input type="text" id="username" placeholder="请输入账号"></div>
+        <div class="logininput logininput2">密码<input type="password" id="password" placeholder="请输入密码">
+            <span id="forgot-password" style="color: #00a1d6; cursor: pointer;">忘记密码？</span>
+        </div>
+    </div>
+    <div id="register-button" class="buttonset">注册</div>
+    <div id="login-button" class="buttonlogin">登录</div>
+
+    <script>
+        var storedUsername = "123";
+        var storedPassword = "123";
+
+        document.getElementById("login-button").addEventListener("click", function () {
+            var usernameInput = document.getElementById("username").value;
+            var passwordInput = document.getElementById("password").value;
+
+            if (usernameInput === storedUsername && passwordInput === storedPassword) {
+                // 输入的账号和密码与预设值一致
+                // 执行登录成功后的操作
+                alert("登录成功！");
+
+                // 更改"buttonlogin"的背景颜色为红色
+                var loginButton = document.getElementById("login-button");
+                loginButton.style.backgroundColor = "red";
+            } else {
+                // 输入的账号和密码与预设值不一致
+                alert("账号或密码错误，请重新输入！");
+            }
+        });
+
+        document.getElementById("forgot-password").addEventListener("click", function () {
+            // 在这里添加处理忘记密码的逻辑
+
+            // 模拟发送重置密码链接的操作
+            if (email) {
+                alert("重置密码链接已发送至您的电子邮件：" + email);
+            } else {
+                alert("请输入有效的电子邮件地址！");
+            }
+        });
+    </script>
+</body>
+
+</html>

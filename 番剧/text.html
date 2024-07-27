@@ -1,0 +1,3527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>番剧-clicli</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/comment.css">
+    <link rel="stylesheet" href="../css/gamecartoon.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    .all {
+        width: 1850px;
+        height: 8270.95px;
+        margin: 0 auto;
+    }
+
+    .content-2 {
+        width: 1850px;
+        height: 616.59px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .pont {
+        display: inline-block;
+        background-color: aquamarine;
+        width: 1000px;
+        height: 46px;
+        margin-left: 10%;
+        margin-top: 400px;
+    }
+
+    .an1 {
+        display: inline-block;
+        width: 450px;
+        height: 46px;
+        background-color: rgba(109, 103, 94, 0.397);
+        border-radius: 2rem;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .an1-1 {
+        background-color: rgba(0, 0, 0, 0.375);
+        width: 44px;
+        height: 46px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .an1-1:hover {
+        position: absolute;
+        transition: all 0.5s;
+        transform: scale(1.2);
+    }
+
+    .an1-2 {
+        background-color: rgba(240, 255, 255, 0);
+        height: 46px;
+        position: absolute;
+        left: 44px;
+    }
+
+    .an2 {
+        background-color: rgba(0, 0, 0, 0.432);
+        width: 44px;
+        height: 46px;
+        right: 1132px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .a {
+        display: block;
+        height: 46px;
+        border-radius: 2rem;
+        padding-top: 10px;
+        padding-left: 58px;
+        padding-right: 30px;
+        margin-left: -40px;
+        font-size: large;
+        background-color: rgba(109, 103, 94, 0.397);
+    }
+
+    .an2:hover {
+        position: absolute;
+        transition: all 0.5s;
+        transform: scale(1.2);
+    }
+
+    .picture {
+        margin-top: 30px;
+        padding-left: 170px;
+    }
+
+    .background-s-img {
+        position: absolute;
+        display: flex;
+        z-index: 2;
+
+    }
+
+    .draw1-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+
+    .draw1-a {
+        display: block;
+        margin-top: 85px;
+        margin-left: 10px;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+        /*黑色阴影，透明度为0.2，模糊半径为0 */
+        text-shadow: 0 0 80px rgba(255, 255, 255, 1);
+        /*调整阴影偏移量，使白色文本变得更加亮*/
+        font-size: smaller;
+    }
+
+    .draw1:hover {
+        box-sizing: border-box;
+        cursor: pointer;
+        box-shadow: 90px 90px 90px 90px white;
+        filter: brightness(100%);
+    }
+
+    .draw1 {
+        background-color: aqua;
+        width: 207.3px;
+        height: 112.89px;
+        margin-left: 0px;
+        border: solid 4px rgba(255, 255, 255, 1);
+        border-radius: 1rem;
+        background: url(./b站头部图片/1.webp);
+        filter: brightness(90%);
+        background-size: cover;
+    }
+
+    #draw2:hover {
+        box-sizing: border-box;
+        cursor: pointer;
+        box-shadow: 90px 90px 90px 90px white;
+        filter: brightness(100%);
+    }
+
+    #draw2 {
+        background-color: aqua;
+        width: 207.3px;
+        height: 112.89px;
+        margin-left: 10px;
+        border: solid 4px rgba(255, 255, 255, 1);
+        border-radius: 1rem;
+        background: url(./b站头部图片/2.webp);
+        filter: brightness(90%);
+        background-size: cover;
+        margin-left: 20px;
+    }
+
+    #draw3:hover {
+        box-sizing: border-box;
+        cursor: pointer;
+        box-shadow: 90px 90px 90px 90px white;
+        filter: brightness(100%);
+    }
+
+    #draw3 {
+        background-color: aqua;
+        width: 207.3px;
+        height: 112.89px;
+        margin-left: 10px;
+        border: solid 4px rgba(255, 255, 255, 1);
+        border-radius: 1rem;
+        background: url(./b站头部图片/3.webp);
+        filter: brightness(90%);
+        background-size: cover;
+        margin-left: 20px;
+    }
+
+    #draw4:hover {
+        box-sizing: border-box;
+        cursor: pointer;
+        box-shadow: 90px 90px 90px 90px white;
+        filter: brightness(100%);
+    }
+
+    #draw4 {
+        background-color: aqua;
+        width: 207.3px;
+        height: 112.89px;
+        margin-left: 10px;
+        border: solid 4px rgba(255, 255, 255, 1);
+        border-radius: 1rem;
+        background: url(./b站头部图片/4.webp);
+        filter: brightness(90%);
+        background-size: cover;
+        margin-left: 20px;
+    }
+
+    #draw5:hover {
+        box-sizing: border-box;
+        cursor: pointer;
+        box-shadow: 90px 90px 90px 90px white;
+        filter: brightness(100%);
+    }
+
+    #draw5 {
+        background-color: aqua;
+        width: 207.3px;
+        height: 112.89px;
+        margin-left: 10px;
+        border: solid 4px rgba(255, 255, 255, 1);
+        border-radius: 1rem;
+        background: url(./b站头部图片/5.webp);
+        filter: brightness(90%);
+        background-size: cover;
+        margin-left: 20px;
+    }
+
+    #draw6:hover {
+        box-sizing: border-box;
+        cursor: pointer;
+        box-shadow: 90px 90px 90px 90px white;
+        filter: brightness(100%);
+    }
+
+    #draw6 {
+        background-color: aqua;
+        width: 207.3px;
+        height: 112.89px;
+        margin-left: 10px;
+        border: solid 4px rgba(255, 255, 255, 1);
+        border-radius: 1rem;
+        background: url(./b站头部图片/6.webp);
+        filter: brightness(90%);
+        background-size: cover;
+        margin-left: 20px;
+    }
+
+    #draw7:hover {
+        box-sizing: border-box;
+        cursor: pointer;
+        box-shadow: 90px 90px 90px 90px white;
+        filter: brightness(100%);
+    }
+
+    #draw7 {
+        background-color: aqua;
+        width: 207.3px;
+        height: 112.89px;
+        margin-left: 10px;
+        border: solid 4px rgba(255, 255, 255, 1);
+        border-radius: 1rem;
+        background: url(./b站头部图片/7.webp);
+        filter: brightness(90%);
+        background-size: cover;
+        margin-left: 20px;
+    }
+
+    .content-3 {
+        margin: 0 auto;
+        width: 1570px;
+        height: 118px;
+        margin-top: 60px;
+    }
+
+    .k1 {
+        position: absolute;
+        display: inline-block;
+        background: linear-gradient(83.84deg, rgba(255, 139, 244, 0.12) 0%, rgba(255, 139, 244, 0.07) 100%) right center / contain no-repeat, url(./背景图片/1.png);
+        background-repeat: no-repeat;
+        width: 377.5px;
+        height: 118px;
+        margin-left: 35px;
+        border-radius: 10px;
+    }
+
+    .k1-1 a {
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .k1-1 a:hover {
+        color: #0cb6f2
+    }
+
+    .k1-2 a {
+        display: inline-block;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .k1-2 a:hover {
+        color: #0cb6f2
+    }
+
+    .k1-3 a {
+        display: inline-block;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .k1-3 a:hover {
+        color: #0cb6f2
+    }
+
+    .k2 {
+        position: absolute;
+        display: inline-block;
+        background: linear-gradient(83.84deg, rgba(108, 226, 169, 0.12) 0%, rgba(108, 226, 169, 0.07) 100%) right center / contain no-repeat, url(./背景图片/2.png);
+        width: 377.5px;
+        background-repeat: no-repeat;
+        height: 118px;
+        margin-left: 430px;
+        border-radius: 10px;
+    }
+
+    .k2-2a1 {
+        display: inline-block;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .k2-2a2 {
+        display: inline-block;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 35px;
+        margin-top: 10px;
+    }
+
+    .k2-3a2 {
+        display: inline-block;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .k2-3a3 {
+        display: inline-block;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 33px;
+        margin-top: 10px;
+    }
+
+    .k2-3a4 {
+        display: inline-block;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 22px;
+        margin-top: 10px;
+    }
+
+    .k2-3a5 {
+        display: inline-block;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 35px;
+        margin-top: 10px;
+    }
+
+    #k2-3a:hover {
+        color: #0cb6f2
+    }
+
+    .k3 {
+        position: absolute;
+        display: inline-block;
+        background: linear-gradient(83.84deg, rgba(114, 184, 255, 0.12) 0%, rgba(114, 184, 255, 0.07) 100%) right center / contain no-repeat, url(./背景图片/3.png);
+        background-repeat: no-repeat;
+        width: 377.5px;
+        height: 118px;
+        margin-left: 825px;
+        border-radius: 10px;
+    }
+
+    .k3-3a2 {
+        display: inline-block;
+        color: #000;
+        margin-left: 20px;
+    }
+
+    .k4 {
+        position: absolute;
+        display: inline-block;
+        background: linear-gradient(83.84deg, rgba(255, 122, 122, 0.12) 0%, rgba(255, 122, 122, 0.07) 100%) right center / contain no-repeat, url(./背景图片/4.png );
+        background-repeat: no-repeat;
+        width: 377.5px;
+        height: 118px;
+        margin-left: 1220px;
+        border-radius: 10px;
+    }
+
+    .k4-4a2 {
+        display: inline-block;
+        color: #000;
+        margin-left: 25px;
+    }
+
+    .content-4-title {
+        width: 1570px;
+        height: 34px;
+        margin: auto 110px auto auto;
+        margin-top: 60px;
+    }
+
+    .t1 {
+        width: 34px;
+        height: 34px;
+        float: left;
+        margin-left: 10px;
+    }
+
+    .t1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .t2 a {
+        display: block;
+        color: #000;
+        font-size: x-large;
+        font-weight: 700;
+    }
+
+    .t2 {
+        width: 72px;
+        height: 34px;
+        float: left;
+    }
+
+    .t3 {
+        width: 96.6px;
+        height: 33.6px;
+        float: right;
+        border-radius: 5px;
+        border: solid 1px;
+        color: #000;
+    }
+
+    .t3:hover {
+        background-color: #d2d2d2;
+    }
+
+    .t3-1 {
+        width: 70px;
+        height: 16px;
+        margin: auto;
+        margin-top: 9px;
+    }
+
+    .t3-1-1 {
+        position: absolute;
+        margin-top: -2px;
+        width: 16px;
+        height: 16px;
+        float: left;
+    }
+
+    .t3-1-1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .t3-1-2 {
+        position: absolute;
+        width: 54px;
+        height: 18px;
+        float: left;
+        margin-top: -3px;
+        margin-left: 16px;
+    }
+
+    .t3-1-2 p {
+        display: block;
+        font-size: 13px;
+    }
+
+    .content-4 {
+        width: 1570px;
+        height: 188.7px;
+        margin: auto 110px auto auto;
+        margin-top: 10px;
+    }
+
+    .text1 {
+        width: 245.05px;
+        height: 188.7px;
+        float: left;
+        margin-left: 6px;
+    }
+
+    .text2 {
+        width: 245.05px;
+        height: 188.7px;
+        float: left;
+        margin-left: 17px;
+    }
+
+    .text3 {
+        width: 245.05px;
+        height: 188.7px;
+        float: left;
+        margin-left: 17px;
+    }
+
+    .text4 {
+        width: 245.05px;
+        height: 188.7px;
+        float: left;
+        margin-left: 17px;
+    }
+
+    .text5 {
+        width: 245.05px;
+        height: 188.7px;
+        float: left;
+        margin-left: 17px;
+    }
+
+    .text6 {
+        width: 245.05px;
+        height: 188.7px;
+        float: left;
+        margin-left: 17px;
+    }
+
+    .T1 {
+        width: 245.05px;
+        height: 136.7px;
+        border-radius: 1rem;
+    }
+
+    .T1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+
+    .T2 {
+        width: 245.05px;
+        height: 22px;
+        margin-top: 5px;
+    }
+
+    .T2 pre {
+        display: inline-block;
+        font-size: 17px;
+        font-family: 仿宋;
+    }
+
+    .T2 p {
+        display: inline-block;
+    }
+
+    .T3 {
+        width: 245.05px;
+        height: 16px;
+        margin-top: 5px;
+        font-size: 5px;
+    }
+
+    .content-5-title {
+        background-color: rgb(255, 255, 255);
+        width: 1570px;
+        height: 34px;
+        margin: auto auto auto 160px;
+        margin-top: 60px;
+    }
+
+    .t5-title-1 {
+        width: 34px;
+        height: 34px;
+        float: left;
+    }
+
+    .t5-title-1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .t5-title-2 {
+        width: 120px;
+        height: 34px;
+        float: left;
+    }
+
+    .t5-title-2 p {
+        font-weight: 600;
+        font-size: 23px;
+    }
+
+    .t5-title-3 {
+        background-color: #d2d2d2;
+        width: 492px;
+        height: 34px;
+        float: left;
+        border-radius: 1rem;
+    }
+
+    .t5-title-3-1 {
+        background-color: white;
+        width: 84px;
+        height: 31px;
+        float: left;
+        margin-top: 1.5px;
+        margin-left: 1px;
+        border-radius: 1rem;
+    }
+
+    .t5-title-3-1-a {
+        display: block;
+        margin: 4px 10px;
+        font-size: 15px;
+    }
+
+    .t5-title-3-2 {
+        width: 56px;
+        height: 28px;
+        float: left;
+        margin-left: 10px;
+        margin-top: 2.5px;
+    }
+
+    .t5-title-3-3 {
+        width: 56px;
+        height: 28px;
+        float: left;
+        margin-top: 2.5px;
+    }
+
+    .t5-title-3-4 {
+        width: 56px;
+        height: 28px;
+        float: left;
+        margin-top: 2.5px;
+    }
+
+    .t5-title-3-5 {
+        width: 56px;
+        height: 28px;
+        float: left;
+        margin-top: 2.5px;
+    }
+
+    .t5-title-3-6 {
+        width: 56px;
+        height: 28px;
+        float: left;
+        margin-top: 2.5px;
+    }
+
+    .t5-title-3-7 {
+        width: 56px;
+        height: 28px;
+        float: left;
+        margin-top: 2.5px;
+    }
+
+    .t5-title-3-8 {
+        width: 56px;
+        height: 28px;
+        float: left;
+        margin-top: 2.5px;
+    }
+
+    .t5-title-4 {
+        border: solid 1px;
+        color: #000;
+        width: 87.6px;
+        height: 34px;
+        float: right;
+        border-radius: 5px;
+    }
+
+    .t5-title-4:hover {
+        background-color: #d2d2d2;
+    }
+
+    .t5-title-4-1 {
+        width: 54px;
+        height: 18px;
+        float: left;
+        margin-top: 8px;
+        margin-left: 6px;
+    }
+
+    .t5-title-4-1:hover {
+        background-color: #d2d2d2;
+    }
+
+    .t5-title-4-1 p {
+        font-size: 5px;
+    }
+
+    .t5-title-4-2 {
+        background-color: rgb(130, 195, 195);
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin-top: 8px;
+        margin-left: 5px;
+    }
+
+    .content-5 {
+        width: 1578px;
+        height: 382.63px;
+        margin: auto auto auto 160px;
+        padding: auto;
+        margin-top: 15px;
+        overflow: hidden;
+    }
+
+    .content-5-a {
+        display: block;
+        margin-left: 13px;
+        font-size: 14px;
+        font-weight: 800;
+        color: rgb(66, 66, 199);
+        padding-top: 2px;
+    }
+
+    .content-5-num {
+        overflow: hidden;
+        width: 1580px;
+        height: 382.63px;
+    }
+
+    .line1 {
+        position: relative;
+        top: 28px;
+        z-index: -1;
+        color: rgba(119, 119, 224, 0.288);
+    }
+
+    .content-5-1-t1 {
+        background-color: #DCE1F9;
+        width: 96.7px;
+        height: 23.2px;
+        margin-left: 15px;
+        border-radius: 1rem;
+        z-index: 2;
+
+    }
+
+    .content-5-1 {
+        width: 225.64px;
+        height: 382.63px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-5-img1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+
+    .content-5-1:hover {
+        width: 450.83px;
+        transition: all 0.5s;
+    }
+
+    .content-5-1-1 {
+        width: 207.64px;
+        height: 276.63px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-5-1:hover .content-5-1-1 {
+        width: 432.83px;
+        height: 276.63px;
+        transition: all 0.5s;
+    }
+
+    .content-5-1-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 8px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+    .content-5-1-2 p {
+        margin-top: -2px;
+    }
+
+    .content-5-1:hover .content-5-1-2 {
+        width: 432.83px;
+        transition: all 0.5s;
+    }
+
+    .content-5-1-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+
+    .content-5-1-3 p {
+        margin-top: -2px;
+        font-size: 5px;
+    }
+
+    .content-5-2 {
+        width: 225.64px;
+        height: 382.63px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-5-2:hover {
+        width: 450.83px;
+        transition: all 0.5s;
+    }
+
+    .content-5-2-1 {
+        width: 207.64px;
+        height: 276.63px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-5-2:hover .content-5-2-1 {
+        width: 432.83px;
+        height: 276.63px;
+        transition: all 0.5s;
+    }
+
+    .content-5-2-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 8px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+    .content-5-2-2 p {
+        margin-top: -2px;
+    }
+
+    .content-5-2:hover .content-5-2-2 {
+        width: 432.83px;
+        transition: all 0.5s;
+    }
+
+    .content-5-2-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+
+    .content-5-2-3 p {
+        margin-top: -2px;
+        font-size: 5px;
+    }
+
+    .content-5-3 {
+        width: 225.64px;
+        height: 382.63px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-5-3:hover {
+        width: 450.83px;
+        transition: all 0.5s;
+    }
+
+    .content-5-3-1 {
+        width: 207.64px;
+        height: 276.63px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-5-3:hover .content-5-3-1 {
+        width: 432.83px;
+        height: 276.63px;
+        transition: all 0.5s;
+    }
+
+    .content-5-3-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 8px;
+        margin-top: 10px;
+    }
+
+    .content-5-3-2 p {
+        margin-top: -2px;
+    }
+
+    .content-5-3-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+
+    .content-5-3-3 p {
+        margin-top: -2px;
+        font-size: 5px;
+    }
+
+    .content-5-4 {
+        width: 225.64px;
+        height: 382.63px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-5-4:hover {
+        width: 450.83px;
+        transition: all 0.5s;
+    }
+
+    .content-5-4-1 {
+        width: 207.64px;
+        height: 276.63px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-5-4:hover .content-5-4-1 {
+        width: 432.83px;
+        height: 276.63px;
+        transition: all 0.5s;
+    }
+
+    .content-5-4-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 8px;
+        margin-top: 10px;
+    }
+
+    .content-5-4-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+
+    .content-5-5 {
+        width: 225.64px;
+        height: 382.63px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-5-5:hover {
+        width: 450.83px;
+        transition: all 0.5s;
+    }
+
+    .content-5-5-1 {
+        width: 207.64px;
+        height: 276.63px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-5-5:hover .content-5-5-1 {
+        width: 432.83px;
+        height: 276.63px;
+        transition: all 0.5s;
+        margin-left: 10px;
+    }
+
+    .content-5-5-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 8px;
+        margin-top: 10px;
+    }
+
+    .content-5-5-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+
+    .content-5-6 {
+        width: 225.64px;
+        height: 382.63px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-5-6:hover {
+        width: 450.83px;
+        transition: all 0.5s;
+    }
+
+    .content-5-6-1 {
+        width: 207.64px;
+        height: 276.63px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-5-6:hover .content-5-6-1 {
+        width: 432.83px;
+        height: 276.63px;
+        transition: all 0.5s;
+        margin-left: 10px;
+    }
+
+    .content-5-6-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 8px;
+        margin-top: 10px;
+    }
+
+    .content-5-6-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+
+    .content-5-7 {
+        display: block;
+        width: 225.64px;
+        height: 382.63px;
+        float: left;
+        margin: 0 0 0 auto;
+        transition: all 0.5s;
+    }
+
+    .content-5-7:hover {
+        width: 450.83px;
+        transition: all 0.5s;
+    }
+
+    .content-5-7-1 {
+        width: 207.64px;
+        height: 276.63px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-5-7:hover .content-5-7-1 {
+        width: 432.83px;
+        height: 276.63px;
+        transition: all 0.5s;
+    }
+
+    .content-5-7-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 8px;
+        margin-top: 10px;
+    }
+
+    .content-5-7-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+
+    .background-gradient {
+        position: absolute;
+        top: 451px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        /* 渐变高度 */
+        z-index: 2;
+        background: linear-gradient(to bottom, transparent, rgb(255, 255, 255));
+    }
+
+    .background-img {
+        width: 1920px;
+        height: 550.59px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        transition: transform .5s ease-in-out;
+        z-index: 1;
+    }
+
+    .background-img img {
+        width: 2046.8px;
+        height: 550.86px;
+        object-fit: cover;
+    }
+
+    .content-6 {
+        /* background-color: bisque; */
+        width: 1578px;
+        height: 382.63px;
+        margin: auto auto auto 160px;
+        padding: auto;
+        margin-top: 15px;
+    }
+
+    .content-6-a {
+        display: block;
+        margin-left: 13px;
+        font-size: 14px;
+        font-weight: 800;
+        color: rgb(66, 66, 199);
+        padding-top: 2px;
+    }
+
+    .content-6-num {
+        overflow: hidden;
+        width: 1580px;
+        height: 403.84px;
+    }
+
+    .content-6-1-t1 {
+        background-color: #DCE1F9;
+        width: 96.7px;
+        height: 23.2px;
+        margin-left: 15px;
+        border-radius: 1rem;
+        z-index: 2;
+
+    }
+
+    .content-6-1 {
+        width: 261.67px;
+        height: 403.84px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-6-img1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+
+    .content-6-1:hover {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-1-1 {
+        width: 245.05px;
+        height: 325.84px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-6-1:hover .content-6-1-1 {
+        width: 509.94px;
+        height: 325.84px;
+        transition: all 0.5s;
+    }
+
+    .content-6-1-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 50px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+    .content-6-1-2 p {
+        margin-top: -2px;
+    }
+
+    .content-6-1:hover .content-6-1-2 {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-1-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 50px;
+        margin-top: 5px;
+    }
+
+    .content-6-1-3 p {
+        margin-top: -2px;
+        font-size: 5px;
+    }
+
+    .content-6-2 {
+        width: 261.67px;
+        height: 393.84px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-6-2:hover {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-2-1 {
+        width: 245.05px;
+        height: 325.84px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-6-2:hover .content-6-2-1 {
+        width: 509.94px;
+        height: 325.84px;
+        transition: all 0.5s;
+    }
+
+    .content-6-2-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 50px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+    .content-6-2-2 p {
+        margin-top: -2px;
+    }
+
+    .content-6-2:hover .content-6-2-2 {
+        width: 432.83px;
+        transition: all 0.5s;
+    }
+
+    .content-6-2-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 50px;
+        margin-top: 5px;
+    }
+
+    .content-6-2-3 p {
+        margin-top: -2px;
+        font-size: 5px;
+    }
+
+    .content-6-3 {
+        width: 261.67px;
+        height: 393.84px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-6-3:hover {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-3-1 {
+        width: 245.05px;
+        height: 325.84px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-6-3:hover .content-6-3-1 {
+        width: 509.94px;
+        height: 325.84px;
+        transition: all 0.5s;
+    }
+
+    .content-6-4 {
+        width: 261.67px;
+        height: 393.84px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-6-4:hover {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-4-1 {
+        width: 245.05px;
+        height: 325.84px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-6-4:hover .content-6-4-1 {
+        width: 509.94px;
+        height: 325.84px;
+        transition: all 0.5s;
+    }
+
+    .content-6-5 {
+        width: 261.67px;
+        height: 393.84px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-6-5:hover {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-5-1 {
+        width: 245.05px;
+        height: 325.84px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-6-5:hover .content-6-5-1 {
+        width: 509.94px;
+        height: 325.84px;
+        transition: all 0.5s;
+        margin-left: 10px;
+    }
+
+    .content-6-6 {
+        width: 261.67px;
+        height: 393.84px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .content-6-6:hover {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-6-1 {
+        width: 245.05px;
+        height: 325.84px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+
+    .content-6-6:hover .content-6-6-1 {
+        width: 509.94px;
+        height: 325.84px;
+        transition: all 0.5s;
+        margin-left: 10px;
+    }
+
+    .content-6-3-2 {
+        width: 175.45px;
+        height: 20px;
+        margin-left: 8px;
+        margin-top: 10px;
+    }
+
+    .content-6-3-3 {
+        width: 175.45px;
+        height: 16.8px;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+
+    .content-6-under1 {
+        margin-top: -18px;
+        margin-left: 8px;
+        background-color: #DCE1F9;
+        width: 245.05px;
+        height: 68px;
+        position: relative;
+        transition: all 0.5s;
+        border-radius: 5px;
+    }
+
+    .content-6-1:hover .content-6-under1 {
+        width: 500.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-2:hover .content-6-under1 {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-3:hover .content-6-under1 {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-4:hover .content-6-under1 {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-5:hover .content-6-under1 {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .content-6-6:hover .content-6-under1 {
+        width: 509.94px;
+        transition: all 0.5s;
+    }
+
+    .under-img {
+        position: absolute;
+        width: 50px;
+        height: 66px;
+        top: 0;
+    }
+
+    .under-img p {
+        display: block;
+        color: rgba(32, 173, 0, 0.298);
+        margin-top: -12px;
+        margin-left: 5px;
+        font-weight: 900;
+        font-family: Avenir;
+        font-style: italic;
+        font-size: 60px;
+    }
+
+    .content-6-title {
+        background-color: rgb(255, 255, 255);
+        width: 1570px;
+        height: 34px;
+        margin: auto auto auto 160px;
+        margin-top: 100px;
+    }
+
+    .t6-title-1 {
+        width: 34px;
+        height: 34px;
+        float: left;
+    }
+
+    .t6-title-1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .t6-title-2 {
+        width: 120px;
+        height: 34px;
+        float: left;
+    }
+
+    .t6-title-2 p {
+        font-weight: 600;
+        font-size: 23px;
+    }
+
+    .slider {
+        position: relative;
+        margin: 30px 118px auto auto;
+        width: 1570px;
+        height: 553.88px;
+        overflow: hidden;
+    }
+
+    .video-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 942px;
+        height: 529.88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        z-index: 2;
+    }
+
+    video {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        display: none;
+        border-radius: 1rem;
+    }
+
+    .thumbnail-box {
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 80px;
+        width: 1491.5px;
+        height: 529.88px;
+        background-color: rgb(11, 107, 32);
+        border-radius: 1rem;
+    }
+
+    .thumbnail-box-background {
+        position: absolute;
+        width: 627.9px;
+        height: 529.88px;
+        background-color: rgb(11, 107, 32);
+        right: 0px;
+        border-radius: 1rem;
+    }
+
+    .thumbnail-box-1 {
+        margin-top: 380px;
+        width: 607.91px;
+        height: 112.17px;
+        position: absolute;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: flex;
+        overflow: hidden;
+        border-radius: 11px;
+    }
+
+    .thumbnail {
+        width: 161.17px;
+        height: 88.64px;
+        cursor: pointer;
+        margin-left: 20px;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+
+    .thumbnail img {
+        width: 161.17px;
+        height: 88.64px;
+        border-radius: 5px;
+        border: 3px solid hsla(0, 0%, 100%, .2);
+        ;
+    }
+
+    .thumbnail:active {
+        transform: scale(1.2);
+        transition: all 1s;
+    }
+
+
+    .neirong {
+        position: absolute;
+        top: 2900px;
+        left: 240px;
+        font-weight: 600;
+        font-size: 24px;
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        bottom: 5300px;
+        left: 110px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 1968px;
+        height: 341px;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .contairs {
+        width: 1700px;
+        height: 2000px;
+        display: flex;
+        overflow: hidden;
+        margin-left: 120px;
+        background-color: #fff;
+    }
+
+    .box {
+        position: relative;
+        width: 200px;
+        height: 270px;
+        margin: 20px;
+        /* 等同于间隔20px */
+        background-color: black;
+        transition: width 0.3s;
+        border-radius: 20px;
+    }
+
+    .box1 {
+        position: relative;
+        width: 200px;
+        height: 270px;
+        margin: 20px;
+        /* 等同于间隔20px */
+        background-color: black;
+        transition: all 0.3s;
+        border-radius: 20px;
+    }
+
+    .past {
+        position: absolute;
+        top: 260px;
+        width: 184px;
+        height: 52px;
+        background-color: white;
+        margin: 10px 0px 0px;
+        padding: 0px 16px 0px 0px;
+
+    }
+
+    .phoot {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        transition: width 0.5s;
+        border-radius: 20px;
+    }
+
+    .box:hover {
+        width: 400px;
+    }
+
+    .box1:hover {
+        width: 400px;
+    }
+
+
+    .shell {
+        width: 1500px;
+        height: 700px;
+        position: relative;
+        left: 400px;
+        bottom: 50px;
+        overflow: hidden;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .images {
+        width: 300%;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: .2s;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .button {
+        position: relative;
+        left: 0px;
+        top: 250px;
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        user-select: none;
+    }
+
+    .button-left,
+    .button-right {
+        font-size: 50px;
+        background-color: white;
+        padding: 0 18px;
+        cursor: pointer;
+        line-height: 60px;
+        border-radius: 50%;
+    }
+
+
+    .content {
+        position: relative;
+        bottom: 5300px;
+        display: flex;
+        width: 1968px;
+        height: 550.37px;
+        background-color: bisque;
+        margin: 48px 0px;
+        overflow: hidden;
+    }
+
+    .content-text {
+        position: absolute;
+        width: 832.58px;
+        height: 550.37px;
+        right: 1300px;
+        background-color: bisque;
+        background-image: url("TP/2.1.jpg");
+        opacity: 0.1;
+    }
+
+    .content-past {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        left: 0px;
+        width: 1500px;
+        height: 700px;
+        background-color: bisque;
+        margin: 90px 200px 0px 0px;
+    }
+
+    .pastone {
+        display: flex;
+        width: 266.11px;
+        height: 353.78px;
+        margin: 25px;
+        background-color: rgb(183, 170, 145);
+        transition: width 0.5s;
+    }
+
+    .past-font {
+        position: absolute;
+        top: 320px;
+        width: 250px;
+        height: 100px;
+        background-color: rgb(163, 133, 95);
+    }
+
+    .pastone:hover {
+        width: 532.22px;
+    }
+
+    .font1 {
+        position: relative;
+        bottom: 0px;
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .font1:hover {
+        color: aqua;
+    }
+
+    .font-past {
+        font-size: 13px;
+        position: relative;
+        top: 0px;
+        display: inline-block;
+    }
+
+    .font-past .font3 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        font-size: 15px;
+
+        /* 定位工具提示文本 - 请看下面的例子 */
+        position: absolute;
+        left: 100px;
+        bottom: 0px;
+        z-index: 1;
+    }
+
+    .font-past:hover .font3 {
+        visibility: visible;
+    }
+
+    .font-titles {
+        display: block;
+        position: absolute;
+        top: 350px;
+        left: 150px;
+        font-size: 20px;
+    }
+
+    .font-titles2 {
+        position: absolute;
+        top: 400px;
+        left: 150px;
+        font-size: 20px;
+    }
+
+    .content-past1 {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        left: -200px;
+        width: 1500px;
+        height: 700px;
+        background-color: bisque;
+        margin: 90px 0px 0px 0px;
+    }
+
+    .content-past2 {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        left: -200px;
+        width: 1500px;
+        height: 700px;
+        background-color: bisque;
+        margin: 90px 200px 0px 0px;
+    }
+
+    .pastone {
+        display: flex;
+        width: 266.11px;
+        height: 353.78px;
+        margin: 25px;
+        background-color: rgb(196, 175, 149);
+        transition: width 0.5s;
+        border-radius: 20px;
+    }
+
+    .past-font {
+        position: absolute;
+        top: 400px;
+        width: 250px;
+        height: 120px;
+        background-color: bisque;
+        border-radius: 20px;
+    }
+
+    .pastone:hover {
+        width: 500px;
+    }
+
+    .wenzi {
+        width: 200px;
+        height: 40px;
+        position: relative;
+        left: 50px;
+        background-color: bisque;
+    }
+
+    .wenzi a {
+        font-size: 18px;
+    }
+
+    .wenzi1 {
+        width: 200px;
+        height: 20px;
+        position: relative;
+        bottom: 15px;
+        left: 50px;
+        background-color: bisque;
+    }
+
+    .wenzi1 h3 {
+        font-size: 14px;
+        color: darkgrey;
+    }
+
+    .shuzi {
+        position: absolute;
+        bottom: 40px;
+        background-color: bisque;
+        width: 50px;
+        height: 100px;
+        font-weight: 900;
+        font-family: Avenir;
+        font-style: italic;
+        font-size: 60px;
+        color: rgba(240, 105, 9, 0.298);
+    }
+</style>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <ul class="headernavleft">
+            <li><a href="#"><span class="iconfont icon-bilibili-fill"
+                        style="font-size:18px; margin-right: 5px; vertical-align: middle;"></span><span
+                        style="vertical-align: middle; font-size: 15px;">首页</span></a></li>
+            <li class="lijump"><a href="#"><span style="vertical-align: middle; font-size: 15px;">番剧</span></a>
+            </li>
+            <li class="lijump"><a href="#"><span style="vertical-align: middle; font-size: 15px;"
+                        onmouseenter="showPopup1()" onmouseleave="hidePopup1()">直播</span></a></li>
+            <div class="zhibo" id="popup1" onmouseenter="cancelHide1()" onmouseleave="hidePopup1()">
+                <div class="zhiboleft">
+                    <h2>热门直播</h2>
+                    <div class="circle-div"><a href="#">
+                            <img src="../images/头像1.webp">
+                            <div class="overlay"></div>
+                            <span style="font-size: 12px;">糯米酱</span>
+                        </a>
+                    </div>
+                    <div class="circle-div"><a href="#">
+                            <img src="../images/头像2.png">
+                            <div class="overlay"></div>
+                            <span style="font-size: 12px;">哔哔巴布</span>
+                        </a>
+                    </div>
+                    <div class="circle-div"><a href="#">
+                            <img src="../images/头像3.webp">
+                            <div class="overlay"></div>
+                            <span style="font-size: 12px;">米西米西</span>
+                        </a>
+                    </div>
+                    <div class="circle-div"><a href="#">
+                            <img src="../images/头像4.jpg">
+                            <div class="overlay"></div>
+                            <span style="font-size: 12px;">坤小鸡🐥</span>
+                        </a>
+                    </div>
+                    <div class="circle-div"><a href="#">
+                            <img src="../images/头像7.jpg">
+                            <div class="overlay"></div>
+                            <span style="font-size: 12px;">坤宝宝👶</span>
+                        </a>
+                    </div>
+                    <div class="circle-div"><a href="#">
+                            <img src="../images/头像6.jpg">
+                            <div class="overlay"></div>
+                            <span style="font-size: 12px;">爱坤无敌</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="zhiboright">
+                    <h2>热门活动</h2>
+                    <div class="activity-div"><img src="../images/活动1.png"></div>
+                    <div class="activity-div"><img src="../images/活动2.png"></div>
+                </div>
+            </div>
+            <li class="lijump"><a href="#"><span style="vertical-align: middle; font-size: 15px;"
+                        onmouseenter="showPopup2()" onmouseleave="hidePopup2()">游戏中心</span></a>
+            </li>
+            <div class="gamezhongxing" id="popup2" onmouseenter="cancelHide2()" onmouseleave="hidePopup2()">
+                <div class="gamezhongxingleft">
+                    <div class="gamezhongxingimgmain"><img src="../images/游戏1.png"></div>
+                    <span class="gamefloatname">命运冠位指定</span>
+                    <div class="gamezhongxingimg"><img src="../images/碧蓝航线.jpg"><span style="font-size: 14px;"><a
+                                href="#">碧蓝航线</a></span></div>
+                    <div class="gamezhongxingimg"><img src="../images/坎特伯雷公主与骑士.png"><span
+                            style="font-size: 14px;"><a href="#">坎特伯雷公主与...</a></span></div>
+                    <div class="gamezhongxingimg"><img src="../images/时空猎人3.png"><span style="font-size: 14px;"><a
+                                href="#">时空猎人3</a></span></div>
+                </div>
+                <div class="gamezhongxingright">
+                    <h2>新游预告</h2>
+                    <div class="gamename gamename1" style="cursor: pointer;"><a href="#">尘白禁区</a></div>
+                    <div class="gamecartoon1"><img src="../images/gamecos/尘白禁区.webp"></div>
+                    <div class="gamename gamename2" style="cursor: pointer;"><a href="#">斯露德</a></div>
+                    <div class="gamecartoon2"><img src="../images/gamecos/斯露德.webp"></div>
+                    <div class="gamename gamename3" style="cursor: pointer;"><a href="#">二之国：交错世界</a></div>
+                    <div class="gamecartoon3"><img src="../images/gamecos/二之国.webp"></div>
+                    <div class="gamename gamename4" style="cursor: pointer;"><a href="#">千年之旅</a></div>
+                    <div class="gamecartoon4"><img src="../images/gamecos/千年之旅.webp"></div>
+                    <div class="gamename gamename5" style="cursor: pointer;"><a href="#">Apex英雄</a></div>
+                    <div class="gamecartoon5"><img src="../images/gamecos/Apex英雄.webp"></div>
+                    <div class="gamename gamename6" style="cursor: pointer;"><a href="#">白夜极光</a></div>
+                    <div class="gamecartoon6"><img src="../images/gamecos/白夜极光.webp"></div>
+                    <div class="gamename gamename7" style="cursor: pointer;"><a href="#">宿命回响</a></div>
+                    <div class="gamecartoon7"><img src="../images/gamecos/宿命回响.webp"></div>
+                </div>
+            </div>
+            <li class="lijump"><a href="#"><span style="vertical-align: middle; font-size: 15px;">会员购</span></a>
+            </li>
+            <li class="lijump"><a href="#"><span style="vertical-align: middle; font-size: 15px;"
+                        onmouseenter="showPopup3()" onmouseleave="hidePopup3()">漫画</span></a></li>
+            <div class="manhua" id="popup3" onmouseenter="cancelHide3()" onmouseleave="hidePopup3()"">
+                <div class=" manhualeft">
+                <div class="manhuaimg"><a href="#" style="color: #000;">
+                        <div><img src="../images/cartoon/辉夜大小姐想让我告白.png"></div><span
+                            style="font-size: 12px;">辉夜大小姐想让我告白...</span>
+                    </a></div>
+                <div class="manhuaimg"><a href="#" style="color: #000;">
+                        <div><img src="../images/cartoon/天官赐福.png"></div><span style="font-size: 12px;">天官赐福</span>
+                    </a></div>
+                <div class="manhuaimg"><a href="#" style="color: #000;">
+                        <div><img src="../images/cartoon/刀剑神域.jpg"></div><span style="font-size: 12px;">刀剑神域
+                            Alicization篇</span>
+                    </a></div>
+                <div class="manhuaimg"><a href="#" style="color: #000;">
+                        <div><img src="../images/cartoon/仙王的日常生活.jpg"></div><span
+                            style="font-size: 12px;">仙王的日常生活</span>
+                    </a></div>
+            </div>
+            <div class="manhuaright">
+                <h2>人气漫画</h2>
+                <div class="manhuaname manhuaname1" style="cursor: pointer;"><a href="#" style="color:#000;"><span
+                            class="number" style="color: #ff4761;">1</span><span class="name"> 间谍过家家</span></a>
+                </div>
+                <div class="manhuacartoon1"><img src="../images/cartoon/间谍过家家.webp"></div>
+                <div class="manhuaname manhuaname2" style="cursor: pointer;"><a href="#" style="color:#000;"><span
+                            class="number" style="color: #ff6c36;">2</span><span class="name"> 我家老婆来自一...</span></a>
+                </div>
+                <div class="manhuacartoon2"><img src="../images/cartoon/我家老婆来自一千年前.webp"></div>
+                <div class="manhuaname manhuaname3" style="cursor: pointer;"><a href="#" style="color:#000;"><span
+                            class="number" style="color: #ff922a">3</span><span class="name"> 【我推的孩子】</span></a>
+                </div>
+                <div class="manhuacartoon3"><img src="../images/cartoon/我推的孩子.webp"></div>
+                <div class="manhuaname manhuaname4" style="cursor: pointer;"><a href="#" style="color:#000;"><span
+                            class="number" style="color: #c9ccd0;">4</span><span class="name"> 碧蓝之海</span></a></div>
+                <div class="manhuacartoon4"><img src="../images/cartoon/碧蓝之海.webp"></div>
+                <div class="manhuaname manhuaname5" style="cursor: pointer;"><a href="#" style="color:#000;"><span
+                            class="number" style="color: #c9ccd0;">5</span><span class="name"> 罗小黑战记</span></a>
+                </div>
+                <div class="manhuacartoon5"><img src="../images/cartoon/罗小黑战记.webp"></div>
+                <div class="manhuaname manhuaname6" style="cursor: pointer;"><a href="#" style="color:#000;"><span
+                            class="number" style="color: #c9ccd0;">6</span><span class="name"> 航海王</span></a></div>
+                <div class="manhuacartoon6"><img src="../images/cartoon/航海王.webp"></div>
+            </div>
+    </div>
+    <li class=" lijump"><a href="#"><span style="vertical-align: middle; font-size: 15px;">赛事</span></a>
+    </li>
+    <li class="scrolltotop">
+        <div><a href="#"><span style="vertical-align: middle; font-size: 15px; margin-left: 5px;">MSI</span></a>
+        </div>
+        <div><a href="#"><img src="../images/MSI.png" style="width: 40px; height: 30px; vertical-align: middle;"></a>
+        </div>
+    </li>
+    <li><a href="#"><span class="iconfont icon-xiazai"
+                style="font-size:18px; margin-right: 5px; vertical-align: middle;"></span><span
+                style="vertical-align: middle; font-size: 15px;" onmouseenter="showPopup4()"
+                onmouseleave="hidePopup4()">下载客户端</span></a></li>
+    <div class="download" id="popup4" onmouseenter="cancelHide4()" onmouseleave="hidePopup4()">
+        <div class="downloadleft">
+            <h1><span class="iconfont icon-shouji"></span> 手机版</h1>
+            <span
+                style="font-size: 12px; color:#61666d; width:132px; margin-left: 25px; display: block;">扫码即可下载手机APP</span>
+            <div class="downloadleftimg"><img src="../images/二维码.png"></div>
+        </div>
+        <div class="downloadright">
+            <h1><span class="iconfont icon-diannao"> Windows端</span></h1>
+            <span
+                style="font-size: 12px; color:#61666d; width:132px; margin-left: 30px; display: block;">适合WIN系统设置</span>
+            <div class="downloadrightimg"><img src="../images/bilibili1.png"></div>
+            <div class="downloadrightbottom">立即下载</div>
+        </div>
+        <div class="downloadbottom"><a href="#">点击查看更多内容 > </a></div>
+    </div>
+    </ul>
+    <div class="headersearch">
+        <input type="text" placeholder="回到古代当太子"><button style="cursor: pointer;"><span
+                class="iconfont icon-31sousuo"></span></button>
+        <div id="search-dropdown" class="dropdown-content">
+            <h2>bilibili热搜</h2>
+            <ul>
+                <li><a
+                        href="https://search.bilibili.com/all?keyword=%E6%B3%95%E5%BA%AD%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%AF%B4%E5%8F%AF%E6%98%AF%E9%9B%AA%E5%95%8A&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px;">1</span> 法庭上禁止说可是雪啊 <img src="../images/梗.png@28h" style="width: 13px;
+                        height: 13px;;"></a></li>
+                <li><a
+                        href="https://search.bilibili.com/all?keyword=%E5%B0%8F%E9%AC%BC%E5%86%8D%E6%80%BC%E4%B9%90%E8%AF%84%E4%BA%BA%E4%BD%A0%E7%AE%A1%E5%BE%97%E7%9D%80%E5%90%97&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px;">2</span> 小鬼再怼乐评人你管得着吗 <img src="../images/热.png@28h" style="width: 13px;
+                        height: 13px;"></a></li>
+                <li><a
+                        href="https://search.bilibili.com/all?keyword=BLG%20GEN&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px;">3</span> BLG零封GEN <img src="../images/热.png@28h" style="width: 13px;
+                        height: 13px;"></a></li>
+                <li><a
+                        href="https://search.bilibili.com/all?keyword=%E5%93%88%E5%B7%A5%E5%A4%A7%E5%9B%9E%E5%BA%94%E4%B8%BA%E5%AD%A6%E7%94%9F%E7%BB%93%E5%A9%9A%E5%BC%80%E7%BB%BF%E7%81%AF&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px; color: #9499a0;">4</span> 哈工大回应为学生结婚开绿灯 <img
+                            src="../images/新.png@28h" style="width: 13px;
+                        height: 13px;"></a></li>
+                <li><a
+                        href="https://search.bilibili.com/all?keyword=%E7%8E%8B%E9%AA%81%E8%A5%BF%E8%97%8F%E5%A9%9A%E7%A4%BC&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px; color: #9499a0;">5</span> 王骁西藏婚礼 <img src="../images/热.png@28h"
+                            style="width: 13px;
+                        height: 13px;"></a></li>
+                <li><a
+                        href="https://search.bilibili.com/all?keyword=Chovy%E8%BE%93%E5%90%8E%E9%9A%BE%E5%8F%97%E5%88%B0%E5%B9%B2%E5%91%95&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px; color: #9499a0;">6</span> Chovy输后难受到干呕</a></li>
+                <li><a
+                        href="https://search.bilibili.com/all?vt=65433049&keyword=%E9%98%B4%E9%98%B3%E5%B8%88%E7%BE%8E%E4%BE%9D%E7%A4%BC%E8%8A%BD%E8%81%94%E5%8A%A8%E5%AE%98%E5%AE%A3&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px; color: #9499a0;">7</span> 阴阳师美依礼芽官宣联动</a></li>
+                <li><a
+                        href="https://search.bilibili.com/all?keyword=Bin%E6%8A%8A%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%A7%90%E5%A7%90%E5%90%93%E5%9D%8F%E4%BA%86&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px; color: #9499a0;">8</span> Bin把翻译小姐姐吓坏了 <img
+                            src="../images/新.png@28h" style="width: 13px;
+                        height: 13px;"></a></li>
+                <li><a
+                        href="https://search.bilibili.com/all?keyword=%E8%82%AF%E5%BE%B7%E5%9F%BA%E7%8E%A9%E5%85%B7%E4%BD%A0%E6%83%B3%E5%85%A5%E6%89%8B%E5%90%97&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px; color: #9499a0;">9</span> 肯德基玩具你想入手吗</a></li>
+                <li><a
+                        href="https://search.bilibili.com/all?keyword=%E8%AD%A6%E6%96%B9%E9%80%9A%E6%8A%A5%E5%8E%A6%E8%88%AA%E5%B7%A5%E4%BD%9C%E4%BA%BA%E5%91%98%E5%81%B7%E6%8B%8D&from_source=webtop_search&spm_id_from=333.1007&search_source=4"><span
+                            style="font-size: 10px; color: #9499a0;">10</span> 警方通报厦航工作人员偷拍 <img
+                            src="../images/新.png@28h" style="width: 13px;
+                        height: 13px;"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="headernavright" style="cursor: pointer;">
+        <div id="personalspace" class="personalspace" onmouseenter="showPopup5()" onmouseleave="hidePopup5()">
+            <span style="margin-left: 3px; color: #fff;">登录</span>
+        </div>
+        <div class="login" id="popup5" onmouseenter="cancelHide5()" onmouseleave="hidePopup5()">
+            <h2>登陆后你可以：</h2>
+            <div class="logincard"><span class="iconfont icon-gaoqing_1"></span><span class="loginname">
+                    免费看高清视频</span></div>
+            <div class="logincard"><span class="iconfont icon-shijian_o"></span><span class="loginname">
+                    多端同步播放记录</span></div>
+            <div class="logincard"><span class="iconfont icon-bofangqi-danmugundongkai"></span><span
+                    class="loginname"> 发表弹幕/评论</span></div>
+            <div class="logincard"><span class="iconfont icon-tv"></span><span class="loginname">
+                    热门番剧影视看不停</span></div>
+            <div class="loginbutton headerspan  "><a href="#">立即登录</a></div>
+            <div class="loginbottom"><span>首次使用？</span><a href="#"> 点我注册</a></div>
+        </div>
+        <div class="headernavright1" onmouseenter="showPopup6()" onmouseleave="hidePopup6()">
+            <div class="icon"><span class="iconfont icon-wodedahuiyuan"></span></div>
+            <div class="headernavrightname" style="padding-left: 2px" ;>大会员</div>
+        </div>
+        <div class="VIP" id="popup6" onmouseenter="cancelHide6()" onmouseleave="hidePopup6()">
+            <div class="VIPcardout">
+                <h2>大会员特权</h2>
+                <div class="VIPcard"><span class="iconfont icon-dianying"></span><span class="VIPname">
+                        热播抢先看</span></div>
+                <div class="VIPcard"><span class="iconfont icon-Free-Tag"></span><span class="VIPname">
+                        会员免费看</span></div>
+                <div class="VIPcard"><span class="iconfont icon-k-line"></span><span class="VIPname">
+                        4K超清画质</span></div>
+                <div class="VIPcard"><span class="iconfont icon-qinghuiyuan"></span><span class="VIPname">
+                        会员专属装扮</span></div>
+            </div>
+            <div class="VIPimg">
+                <img src="../images/VIP.png">
+                <span class="iconfont icon-saoyisao"></span>
+                <span class="iconfont icon-weixinzhifu" style="color:green"></span>
+                <span class="iconfont icon-zhifubao" style="color:blue"></span>
+            </div>
+            <div class="VIPfooter">
+                <div class="VIPfooterleft">
+                    <span>首月15元</span>
+                    <span>海量热播内容免费看</span>
+                </div>
+                <div class="VIPfooterright"><a href="#">成为大会员</a></div>
+            </div>
+        </div>
+        <div class="headernavright1" onmouseenter="showPopup7()" onmouseleave="hidePopup7()">
+            <div class="icon"><span class="iconfont icon-xiaoxi"></span></div>
+            <div class="headernavrightname">消息</div>
+        </div>
+        <div class="message" id="popup7" onmouseenter="cancelHide7()" onmouseleave="hidePopup7()">
+            <div class="messagetop">登录即可查看消息记录</div>
+            <div class="messagefooter"><a href="#">立即登录</a></div>
+        </div>
+        <div class="headernavright1" onmouseenter="showPopup8()" onmouseleave="hidePopup8()">
+            <div class="icon"><span class="iconfont icon-fengche" style="font-weight: bold;"></span></div>
+            <div class="headernavrightname">动态</div>
+        </div>
+        <div class="dynamic" id="popup8" onmouseenter="cancelHide8()" onmouseleave="hidePopup8()">
+            <div class="dynamictop">登录即可查看关注动态</div>
+            <div class="dynamicfooter"><a href="#">立即登录</a></div>
+        </div>
+        <div class="headernavright1" onmouseenter="showPopup9()" onmouseleave="hidePopup9()">
+            <div class="icon"><span class="iconfont icon-xingxing"></span></div>
+            <div class="headernavrightname">收藏</div>
+        </div>
+        <div class="collection" id="popup9" onmouseenter="cancelHide9()" onmouseleave="hidePopup9()">
+            <div class="collectiontop">登录即可查看我的收藏</div>
+            <div class="collectionfooter"><a href="#">立即登录</a></div>
+        </div>
+        <div class="headernavright1" onmouseenter="showPopup10()" onmouseleave="hidePopup10()">
+            <div class="icon"><span class="iconfont icon-lishi"></span></div>
+            <div class="headernavrightname">历史</div>
+        </div>
+        <div class="history" id="popup10" onmouseenter="cancelHide10()" onmouseleave="hidePopup10()">
+            <div class="historytop">登录即可查看历史记录</div>
+            <div class="historyfooter"><a href="#">立即登录</a></div>
+        </div>
+        <div class="headernavright1">
+            <div class="icon"><span class="iconfont icon-dengpao"></span></div>
+            <div class="headernavrightname">创客</div>
+        </div>
+        <div class="submit" onmouseenter="showPopup11()" onmouseleave="hidePopup11()">
+            <span class="iconfont icon-shangchuan">
+                <span style="font-size: 14px; margin-left: 2px;">投稿</span>
+            </span>
+        </div>
+        <div class="submitmessage" id="popup11" onmouseenter="cancelHide11()" onmouseleave="hidePopup11()">
+            <div class="submitcardout">
+                <div class="submittop"><span class="iconfont icon-wenzhang1"></span></div>
+                <div class="submitfooter">专栏投稿</div>
+            </div>
+            <div class="submitcardout">
+                <div class="submittop"><span class="iconfont icon-audio"></span></div>
+                <div class="submitfooter">音频投稿</div>
+            </div>
+            <div class="submitcardout">
+                <div class="submittop"><span class="iconfont icon-xiaolian"></span></div>
+                <div class="submitfooter">贴纸投稿</div>
+            </div>
+            <div class="submitcardout">
+                <div class="submittop"><span class="iconfont icon-yanchangshipin"></span></div>
+                <div class="submitfooter">视频投稿</div>
+            </div>
+            <div class="submitcardout">
+                <div class="submittop"><span class="iconfont icon-shebeiguanli"></span></div>
+                <div class="submitfooter">投稿管理</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="all">
+        <div class="content-2">
+            <div class="pont">
+                <div class="an1">
+                    <div class="an1-1">
+
+                    </div>
+                    <div class="an1-2">
+                        <a class="a">物理魔法使-马修</a>
+                    </div>
+                </div>
+                <div class="an2">
+
+                </div>
+            </div>
+            <div class="picture">
+                <div class="background-img">
+                    <div>
+                        <img src="./b站头部图片2/1.webp" data-text="">
+                    </div>
+                    <div>
+                        <img src="./b站头部图片2/2.webp">
+                    </div>
+                    <div>
+                        <img src="./b站头部图片2/3.webp">
+                    </div>
+                    <div>
+                        <img src="./b站头部图片2/4.webp">
+                    </div>
+                    <div>
+                        <img src="./b站头部图片2/5.webp">
+                    </div>
+                    <div>
+                        <img src="./b站头部图片2/6.webp">
+                    </div>
+                    <div>
+                        <img src="./b站头部图片2/7.webp">
+                    </div>
+
+                </div>
+                <div class="background-gradient"></div>
+                <div class="background-s-img">
+                    <div class="draw1" id="draw1">
+                        <a class="draw1-a">物理魔法使-马修</a>
+                    </div>
+                    <div class="draw1" id="draw2">
+                        <a class="draw1-a">假面骑士-极狐</a>
+                    </div>
+                    <div class="draw1" id="draw3">
+                        <a class="draw1-a">石纪元3</a>
+                    </div>
+                    <div class="draw1" id="draw4">
+                        <a class="draw1-a">异世界流浪美食家</a>
+                    </div>
+                    <div class="draw1" id="draw5">
+                        <a class="draw1-a">久保同学不放过我</a>
+                    </div>
+                    <div class="draw1" id="draw6">
+                        <a class="draw1-a">成龙历险记</a>
+                    </div>
+                    <div class="draw1" id="draw7">
+                        <a class="draw1-a">跃动青春</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-3">
+            <div class="k1">
+                <div class="k1-1">
+                    <a href="">番剧索引</a>
+
+                </div>
+                <div class="k1-2">
+                    <a href="">追番人数</a>
+                    <a href="">最高评分</a>
+                </div>
+                <div class="k1-3">
+                    <a href="">更新时间</a>
+                    <a href="">播放数量</a>
+                </div>
+            </div>
+            <div class="k2">
+                <div class="k1-1">
+                    <a href="">类型风格</a>
+                </div>
+                <div class="k2-2">
+                    <a href="" class="k2-2a1" id="k2-3a">原创</a>
+                    <a href="" class="k2-2a2" id="k2-3a">小说改</a>
+                    <a href="" class="k2-2a2" id="k2-3a">特摄</a>
+                    <a href="" class="k2-2a2" id="k2-3a">热血</a>
+                    <a href="" class="k2-2a2" id="k2-3a">奇幻</a>
+                </div>
+                <div class="k2-3">
+                    <a href="" class="k2-2a1" id="k2-3a">漫画改</a>
+                    <a href="" class="k2-3a2" id="k2-3a">游戏改</a>
+                    <a href="" class="k2-3a3" id="k2-3a">布袋戏</a>
+                    <a href="" class="k2-3a4" id="k2-3a">穿越</a>
+                    <a href="" class="k2-3a5" id="k2-3a">战斗</a>
+                </div>
+            </div>
+            <div class="k3">
+                <div class="k1-1">
+                    <a href="">首播时间</a>
+                </div>
+                <div class="k3-2">
+                    <a href="" class="k2-2a1" id="k2-3a">2023</a>
+                    <a href="" class="k3-3a2" id="k2-3a">2022</a>
+                    <a href="" class="k3-3a2" id="k2-3a">2021</a>
+                    <a href="" class="k3-3a2" id="k2-3a">2020</a>
+                </div>
+                <div class="k3-3">
+                    <a href="" class="k2-2a1" id="k2-3a">2019</a>
+                    <a href="" class="k3-3a2" id="k2-3a">2018</a>
+                    <a href="" class="k3-3a2" id="k2-3a">2017</a>
+                    <a href="" class="k3-3a2" id="k2-3a">2016</a>
+                </div>
+            </div>
+            <div class="k4">
+                <div class="k1-1">
+                    <a href="">热搜</a>
+                </div>
+                <div class="k4-2">
+                    <a href="" class="k2-2a1" id="k2-3a">鬼灭之刃刀匠村篇</a>
+                    <a href="" class="k4-4a2" id="k2-3a">石纪元第三季</a>
+                </div>
+                <div class="k4-3">
+                    <a href="" class="k2-2a1" id="k2-3a">物理魔法使马修</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-4-title">
+            <div class="t1">
+                <img class="t1-picture" src="./背景图片/5.png" alt="">
+            </div>
+            <div class="t2">
+                <a href="">正在追</a>
+            </div>
+            <div class="t3">
+                <div class="t3-1">
+                    <div class="t3-1-1">
+                        <img src="./背景图片/6.png" alt="">
+                    </div>
+                    <div class="t3-1-2">
+                        <p>我的追番</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-4">
+            <div class="text1">
+                <div class="T1">
+                    <img src="./b站第2部分图片/1.webp" alt="">
+                </div>
+                <div class="T2">
+                    <p>因为太怕痛全点防御力了 第二季</p>
+                </div>
+                <div class="T3">
+                    <p>更新至11话</p>
+                </div>
+            </div>
+            <div class="text2">
+                <div class="T1">
+                    <img src="./b站第2部分图片/2.webp" alt="">
+                </div>
+                <div class="T2">
+                    <p>名侦探柯南：犯人犯泽先生</p>
+                </div>
+                <div class="T3">
+                    <p>更新至第九话</p>
+                </div>
+            </div>
+            <div class="text3">
+                <div class="T1">
+                    <img src="./b站第2部分图片/3.webp" alt="">
+                </div>
+                <div class="T2">
+                    <p>入间同学入魔了 第三季</p>
+                </div>
+                <div class="T3">
+                    <p>更新至第15话</p>
+                </div>
+            </div>
+            <div class="text4">
+                <div class="T1">
+                    <img src="./b站第2部分图片/4.webp" alt="">
+                </div>
+                <div class="T2">
+                    <p>国王的排名 勇气的宝箱</p>
+                </div>
+                <div class="T3">
+                    <p>更新至第7话</p>
+                </div>
+            </div>
+            <div class="text5">
+                <div class="T1">
+                    <img src="./b站第2部分图片/5.webp" alt="">
+                </div>
+                <div class="T2">
+                    <pre>D r. S T O N E 石纪元(第三季)</pre>
+                </div>
+                <div class="T3">
+                    <p>更新至第8话</p>
+                </div>
+            </div>
+            <div class="text6">
+                <div class="T1">
+                    <img src="./b站第2部分图片/6.webp" alt="">
+                </div>
+                <div class="T2">
+                    <p>名侦探柯南</p>
+                </div>
+                <div class="T3">
+                    <p>更新至1142话</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-5-title">
+            <div class="t5-title-1">
+                <img src="./b站第2部分图片/con5.png" alt="">
+            </div>
+            <div class="t5-title-2">
+                <p>新番时间表</p>
+            </div>
+            <div class="t5-title-3">
+                <div class="t5-title-3-1" id="t1">
+                    <a class="t5-title-3-1-a">最近更新</a>
+                </div>
+                <div class="t5-title-3-2" id="t2">
+                    <a class="t5-title-3-2-a">周一</a>
+                </div>
+                <div class="t5-title-3-3" id="t3">
+                    <a class="t5-title-3-2-a">周二</a>
+                </div>
+                <div class="t5-title-3-4" id="t4">
+                    <a class="t5-title-3-2-a">周三</a>
+                </div>
+                <div class="t5-title-3-5" id="t5">
+                    <a class="t5-title-3-2-a">周四</a>
+                </div>
+                <div class="t5-title-3-6" id="t6">
+                    <a class="t5-title-3-2-a">周五</a>
+                </div>
+                <div class="t5-title-3-7" id="t7">
+                    <a class="t5-title-3-2-a">周六</a>
+                </div>
+                <div class="t5-title-3-8" id="t8">
+                    <a class="t5-title-3-2-a">周日</a>
+                </div>
+            </div>
+            <div class="t5-title-4">
+                <div class="t5-title-4-1">
+                    <p>查看全部</p>
+                </div>
+                <div class="t5-title-4-2">
+
+                </div>
+            </div>
+        </div>
+        <hr class="line1" size="3px" color="">
+        <div class="content-5">
+            <div class="content-5-num">
+                <div class="content-5-1" id="div1">
+                    <div class="content-5-1-t1">
+                        <a class="content-5-a">周五 20:00</a>
+                    </div>
+                    <div class="content-5-1-1">
+                        <img class="content-5-img1" src="./b站图片/1.webp" alt="">
+                    </div>
+                    <div class="content-5-1-2">
+                        <p title="因为太怕痛全点防御力了 第二季">因为太怕痛全点防御力了 第二季</p>
+                    </div>
+                    <div class="content-5-1-3">
+                        <p>更新至11话</p>
+                    </div>
+                </div>
+                <div class="content-5-2" id="div2">
+                    <div class="content-5-1-t1">
+                        <a class="content-5-a">周五 18:25</a>
+                    </div>
+                    <div class="content-5-2-1">
+                        <img class="content-5-img1" src="./b站图片/2.webp" alt="">
+                    </div>
+                    <div class="content-5-2-2">
+                        <p title="LOVE LIVE 爱与演唱会！超级明星">LOVE LIVE 爱与演唱会！超级明星</p>
+                    </div>
+                    <div class="content-5-2-3">
+                        <p>更新至21话</p>
+                    </div>
+                </div>
+                <div class="content-5-3" id="div3">
+                    <div class="content-5-1-t1">
+                        <a class="content-5-a">周五 18:00</a>
+                    </div>
+                    <div class="content-5-3-1">
+                        <img class="content-5-img1" src="./b站图片/3.webp" alt="">
+                    </div>
+                    <div class="content-5-3-2">
+                        <p title="石纪元第三季">石纪元第三季</p>
+                    </div>
+                    <div class="content-5-3-3">
+                        <p>更新至第8话</p>
+                    </div>
+                </div>
+                <div class="content-5-4" id="div4">
+                    <div class="content-5-1-t1">
+                        <a class="content-5-a">周五 01:25</a>
+                    </div>
+                    <div class="content-5-4-1">
+                        <img class="content-5-img1" src="./b站图片/4.webp" alt="">
+                    </div>
+                    <div class="content-5-3-2">
+                        <p>物理魔法使马修</p>
+                    </div>
+                    <div class="content-5-3-3">
+                        <p>更新至第3话</p>
+                    </div>
+                </div>
+                <div class="content-5-5" id="div5">
+                    <div class="content-5-1-t1">
+                        <a class="content-5-a">周四 22:30</a>
+                    </div>
+                    <div class="content-5-5-1">
+                        <img class="content-5-img1" src="./b站图片/5.webp" alt="">
+                    </div>
+                    <div class="content-5-3-2">
+                        <p>妖怪手表</p>
+                    </div>
+                    <div class="content-5-3-3">
+                        <p>更新至第7话</p>
+                    </div>
+                </div>
+                <div class="content-5-6" id="div6">
+                    <div class="content-5-1-t1">
+                        <a class="content-5-a">周四 00:00</a>
+                    </div>
+                    <div class="content-5-6-1">
+                        <img class="content-5-img1" src="./b站图片/6.webp" alt="">
+                    </div>
+                    <div class="content-5-3-2">
+                        <p>德凯奥特曼最终章</p>
+                    </div>
+                    <div class="content-5-3-3">
+                        <p>更新至全片</p>
+                    </div>
+                </div>
+                <div class="content-5-7" id="div7">
+                    <div class="content-5-1-t1">
+                        <a class="content-5-a">周四 23:50</a>
+                    </div>
+                    <div class="content-5-7-1">
+                        <img class="content-5-img1" src="./b站图片/7.webp" alt="">
+                    </div>
+                    <div class="content-5-3-2">
+                        <p>国王的排名</p>
+                    </div>
+                    <div class="content-5-3-3">
+                        <p>更新至第8话</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-5-title">
+            <div class="t5-title-1">
+                <img src="./b站第2部分图片/con5-2.png" alt="">
+            </div>
+            <div class="t5-title-2">
+                <p>番剧热搜榜</p>
+            </div>
+            <div class="t5-title-4">
+                <div class="t5-title-4-1">
+                    <p>查看全部</p>
+                </div>
+                <div class="t5-title-4-2">
+
+                </div>
+            </div>
+        </div>
+        <div class="content-6">
+            <div class="content-6-num">
+                <div class="content-6-1" id="div8">
+                    <div class="content-6-1-1">
+                        <img class="content-6-img1" src="./b站图片/1.webp" alt="">
+                    </div>
+                    <div class="content-6-under1">
+                        <div class="under-img">
+                            <p>1</p>
+                        </div>
+                        <div class="content-6-1-2">
+                            <p title="因为太怕痛全点防御力了 第二季">因为太怕痛全点防御力了 第二季</p>
+                        </div>
+                        <div class="content-6-1-3">
+                            <p>更新至11话</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-6-2" id="div9">
+                    <div class="content-6-2-1">
+                        <img class="content-6-img1" src="./b站图片/2.webp" alt="">
+                    </div>
+                    <div class="content-6-under1">
+                        <div class="under-img">
+                            <p>2</p>
+                        </div>
+                        <div class="content-6-2-2">
+                            <p title="LOVE LIVE 爱与演唱会！超级明星">LOVE LIVE 爱与演唱会！超级明星</p>
+                        </div>
+                        <div class="content-6-2-3">
+                            <p>更新至21话</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-6-3" id="div10">
+                    <div class="content-6-3-1">
+                        <img class="content-6-img1" src="./b站图片/3.webp" alt="">
+                    </div>
+                    <div class="content-6-under1">
+                        <div class="under-img">
+                            <p>3</p>
+                        </div>
+                        <div class="content-6-2-2">
+                            <p title="石纪元第三季">石纪元第三季</p>
+                        </div>
+                        <div class="content-6-2-3">
+                            <p>更新至第8话</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-6-4" id="div11">
+                    <div class="content-6-4-1">
+                        <img class="content-6-img1" src="./b站图片/4.webp" alt="">
+                    </div>
+                    <div class="content-6-under1">
+                        <div class="under-img">
+                            <p>4</p>
+                        </div>
+                        <div class="content-6-2-2">
+                            <p>物理魔法使马修</p>
+                        </div>
+                        <div class="content-6-2-3">
+                            <p>更新至第3话</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-6-5" id="div12">
+                    <div class="content-6-5-1">
+                        <img class="content-6-img1" src="./b站图片/5.webp" alt="">
+                    </div>
+                    <div class="content-6-under1">
+                        <div class="under-img">
+                            <p>5</p>
+                        </div>
+                        <div class="content-6-2-2">
+                            <p>妖怪手表</p>
+                        </div>
+                        <div class="content-6-2-3">
+                            <p>更新至第7话</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-6-6" id="div13">
+                    <div class="content-6-6-1">
+                        <img class="content-6-img1" src="./b站图片/6.webp" alt="">
+                    </div>
+                    <div class="content-6-under1">
+                        <div class="under-img">
+                            <p>6</p>
+                        </div>
+                        <div class="content-6-2-2">
+                            <p>德凯奥特曼最终章</p>
+                        </div>
+                        <div class="content-6-2-3">
+                            <p>更新至全片</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-6-title">
+            <div class="t6-title-1">
+                <img src="./b站第2部分图片/con5-3.png" alt="">
+            </div>
+            <div class="t6-title-2">
+                <p>新热推荐</p>
+            </div>
+        </div>
+        <div class="slider">
+            <!-- 视频播放区域 -->
+            <div class="video-box">
+                <video width="500px" height="400px" controls muted autoplay="autoPlay" loop>
+                    <source src="#">
+                </video>
+                <video width="500px" height="400px" controls muted autoplay="autoPlay" loop>
+                    <source src="#">
+                </video>
+                <video width="500px" height="400px" controls muted autoplay="autoPlay" loop>
+                    <source src="#">
+                </video>
+                <video width="500px" height="400px" controls muted autoplay="autoPlay" loop>
+                    <source src="#">
+                </video>
+            </div>
+            <!-- 缩略图区域 -->
+            <div class="thumbnail-box">
+                <div class="thumbnail-box-background">
+                    <div class="thumbnail-box-1">
+                        <div class="thumbnail" data-video-index="0">
+                            <img src="./b站头部图片/1.webp">
+                        </div>
+
+                        <div class="thumbnail" data-video-index="1">
+                            <img src="./b站头部图片/2.webp">
+                        </div>
+
+                        <div class="thumbnail" data-video-index="2">
+                            <img src="./b站头部图片/3.webp">
+                        </div>
+
+                        <div class="thumbnail" data-video-index="3">
+                            <img src="./b站头部图片/4.webp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="neirong">猜你喜欢</div>
+    <div class="container">
+        <div class="contairs">
+            <div class="box">
+                <img src="TP/1 (1).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">假面骑士极狐</a>
+                    <div class="font-past">开局满级谜语人
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (2).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">名侦探柯南犯人 犯泽先生</a>
+                    <div class="font-past">真相永远只有一个
+                        <span class="font3">更新至98话</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (3).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">入间同学入魔了 (第三季)</a>
+                    <div class="font-past">老好人入侵魔界
+                        <span class="font3">入间同学入魔了</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (4).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">物理魔法使-马修</a>
+                    <div class="font-past">肌肉粉碎所有魔法
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (5).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">Dr.STONE石纪元(第三季)</a>
+                    <div class="font-past">属于理科生的浪漫
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (6).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">国王排名 勇气的宝箱</a>
+                    <div class="font-past">爱与勇气的传说
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box1">
+                <img src="TP/1 (7).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">悦动青春</a>
+                    <div class="font-past">感同身受的青春物语
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 重复7次 -->
+
+    <div class="container">
+        <div class="contairs">
+            <div class="box">
+                <img src="TP/1 (8).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">因为怕痛就全点防御</a>
+                    <div class="font-past">盾娘的开挂日常
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (9).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">名侦探柯南（中配）</a>
+                    <div class="font-past">小学生的侦探生活
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (10).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">海绵宝宝 中文配音</a>
+                    <div class="font-past">是谁住在大菠萝里
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (11).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">刀剑神域（日配）</a>
+                    <div class="font-past">星爆气流斩！
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (12).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">银魂（第一季）</a>
+                    <div class="font-past">最无厘头的热血动画
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (13).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">久保同学不放过我</a>
+                    <div class="font-past">在我眼里你会发光
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (14).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">犬夜叉 （第一季）</a>
+                    <div class="font-past">带你穿越回童年
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 重复7次 -->
+
+    <div class="container">
+        <div class="contairs">
+            <div class="box">
+                <img src="TP/1 (15).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">蜡笔小星 （第二季）</a>
+                    <div class="font-past">不想来笑一下吗？
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (16).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">双星之阴阳师</a>
+                    <div class="font-past">命中注定的二人
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (17).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">鬼灭之刃 （第一季）</a>
+                    <div class="font-past">谁都斩不断的羁绊
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (18).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">雷古洛思奥特曼</a>
+                    <div class="font-past">宇宙幻兽拳宗师诞生
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (19).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">放学后失眠的你</a>
+                    <div class="font-past">有你,夜晚有了期待
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (20).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">孤独摇滚！</a>
+                    <div class="font-past">女孩们的乐队梦想
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (21).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">因为是反派大小姐所以...</a>
+                    <div class="font-past">两个反派，先婚后爱
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 重复7次 -->
+    <div class="container">
+        <div class="contairs">
+            <div class="box">
+                <img src="TP/1 (22).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">咒术回站 （第一季）</a>
+                    <div class="font-past">我无敌，你随意
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (23).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">间谍过家家</a>
+                    <div class="font-past">散装家庭的爆笑喜剧
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (24).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">蓝色监狱</a>
+                    <div class="font-past">教练我想踢足球 热血足球番
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (25).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">冰菓 （第一季）</a>
+                    <div class="font-past">我很好奇！
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (26).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">无论何时我们的恋...</a>
+                    <div class="font-past">手的距离是10厘米
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (27).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">紫罗兰永恒花园</a>
+                    <div class="font-past">咦?我的眼泪...
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="TP/1 (28).jpeg" class="phoot">
+                <div class="past">
+                    <a href="#" class="font1">中二病也要谈恋爱！</a>
+                    <div class="font-past">吾之名为暗焰魔法使
+                        <span class="font3"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 重复4次 -->
+    </div>
+    <div class="content">
+        <div class="content-text">
+        </div>
+        <div class="font-titles">
+            <h1>热血番剧榜</h1>
+        </div>
+        <div class="font-titles2">每小时更新</div>
+        <div class="shell">
+            <ui class="images">
+                <li class="img">
+                    <div class="content-past">
+                        <div class="pastone">
+                            <img src="TP/1 (5).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">1</div>
+                                <div class="wenzi"><a href="#" class="font1">D r . S T O N E 石纪元</a></div>
+                                <div class="wenzi1">
+                                    <h3>属于理科生的浪漫</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/1 (4).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">2</div>
+                                <div class="wenzi"><a href="#" class="font1">物理魔法使-马修</a></div>
+                                <div class="wenzi1">
+                                    <h3>肌肉粉碎所有魔法</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/1 (29).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">3</div>
+                                <div class="wenzi"><a href="#" class="font1">博人传 火影忍者</a></div>
+                                <div class="wenzi1">
+                                    <h3>新世代再续火影</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/1 (18).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">4</div>
+                                <div class="wenzi"><a href="#" class="font1">雷古洛思奥特曼</a></div>
+                                <div class="wenzi1">
+                                    <h3>宇宙幻兽拳宗师诞生</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/1 (1).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">5</div>
+                                <div class="wenzi"><a href="#" class="font1">假面骑士极狐</a></div>
+                                <div class="wenzi1">
+                                    <h3>开局满级谜语人</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="img">
+                    <div class="content-past1">
+                        <div class="pastone">
+                            <img src="TP/1 (17).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">1</div>
+                                <div class="wenzi"><a href="#" class="font1">鬼灭之刃</a></div>
+                                <div class="wenzi1">
+                                    <h3>谁都斩不断的羁绊</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/3 (17).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">2</div>
+                                <div class="wenzi"><a href="#" class="font1">鬼灭之刃 游郭篇</a></div>
+                                <div class="wenzi1">
+                                    <h3>斩断鬼所栖身的夜</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/3 (18).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">3</div>
+                                <div class="wenzi"><a href="#" class="font1">火影忍者 疾风传</a></div>
+                                <div class="wenzi1">
+                                    <h3>真正的火影传奇</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/1 (22).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">4</div>
+                                <div class="wenzi"><a href="#" class="font1">咒术回站</a></div>
+                                <div class="wenzi1">
+                                    <h3>我无敌，你随意</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/3 (21).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">5</div>
+                                <div class="wenzi"><a href="#" class="font1">JOJO的奇妙冒险</a></div>
+                                <div class="wenzi1">
+                                    <h3>这就是黄金体验</h3>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="img">
+                    <div class="content-past2">
+                        <div class="pastone">
+                            <img src="TP/1 (24).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">1</div>
+                                <div class="wenzi"><a href="#" class="font1">蓝色监狱</a></div>
+                                <div class="wenzi1">
+                                    <h3>教练我想踢足球</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/3 (10).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">2</div>
+                                <div class="wenzi"><a href="#" class="font1">黑色四叶草</a></div>
+                                <div class="wenzi1">
+                                    <h3>我要成为魔法帝</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/3 (25).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">3</div>
+                                <div class="wenzi"><a href="#" class="font1">刀剑神域 Aliczation</a></div>
+                                <div class="wenzi1">
+                                    <h3>这游戏真要命！</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/3 (26).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">4</div>
+                                <div class="wenzi"><a href="#" class="font1">鬼灭之刃 无限列车篇</a></div>
+                                <div class="wenzi1">
+                                    <h3>潜入无限的梦境中</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pastone">
+                            <img src="TP/3 (8).jpeg" class="phoot">
+                            <div class="past-font">
+                                <div class="shuzi">5</div>
+                                <div class="wenzi"><a href="#" class="font1">JOJO的奇妙冒险</a></div>
+                                <div class="wenzi1">
+                                    <h3>这就是黄金体验</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ui>
+            <div class="button">
+                <div class="button-left">
+                    < </div>
+                        <div class="button-right"> > </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    var div1 = document.getElementById("div1");
+    var div2 = document.getElementById("div2");
+    var div3 = document.getElementById("div3");
+    var div4 = document.getElementById("div4");
+    var div5 = document.getElementById("div5");
+    var div6 = document.getElementById("div6");
+    var div7 = document.getElementById("div7");
+    var div8 = document.getElementById("div8");
+    var div8 = document.getElementById("div9");
+    var div8 = document.getElementById("div10");
+    var div8 = document.getElementById("div11");
+    var div8 = document.getElementById("div12");
+    var div8 = document.getElementById("div13");
+    var father = document.getElementById("content-5");
+    var t1 = document.getElementById("t1");
+    var t2 = document.getElementById("t2");
+    var t3 = document.getElementById("t3");
+    var t4 = document.getElementById("t4");
+    var t5 = document.getElementById("t5");
+    var t6 = document.getElementById("t6");
+    var t7 = document.getElementById("t7");
+    var t8 = document.getElementById("t8");
+
+    div7.addEventListener('mouseover', function () {
+        div1.style.float = 'right';
+        div2.style.float = 'right';
+        div3.style.float = 'right';
+        div4.style.float = 'right';
+        div5.style.float = 'right';
+        div6.style.float = 'right';
+    })
+    div7.addEventListener('mouseout', function () {
+        div1.style.float = 'left';
+        div2.style.float = 'left';
+        div3.style.float = 'left';
+        div4.style.float = 'left';
+        div5.style.float = 'left';
+        div6.style.float = 'left';
+        div7.style.float = 'left';
+    })
+
+    div13.addEventListener('mouseover', function () {
+        div8.style.float = 'right';
+        div9.style.float = 'right';
+        div10.style.float = 'right';
+        div11.style.float = 'right';
+        div12.style.float = 'right';
+    })
+    div13.addEventListener('mouseout', function () {
+        div8.style.float = 'left';
+        div9.style.float = 'left';
+        div10.style.float = 'left';
+        div11.style.float = 'left';
+        div12.style.float = 'left';
+    })
+    t1.addEventListener("mouseover", function () {
+        this.style.cursor = "pointer";
+    });
+
+    t1.addEventListener("mouseout", function () {
+        this.style.cursor = "";
+    });
+
+    t2.addEventListener("mouseover", function () {
+        this.style.cursor = "pointer";
+    });
+
+    t2.addEventListener("mouseout", function () {
+        this.style.cursor = "";
+    });
+
+    t3.addEventListener("mouseover", function () {
+        this.style.cursor = "pointer";
+    });
+
+    t3.addEventListener("mouseout", function () {
+        this.style.cursor = "";
+    });
+
+    t4.addEventListener("mouseover", function () {
+        this.style.cursor = "pointer";
+    });
+
+    t4.addEventListener("mouseout", function () {
+        this.style.cursor = "";
+    });
+
+    t5.addEventListener("mouseover", function () {
+        this.style.cursor = "pointer";
+    });
+
+    t5.addEventListener("mouseout", function () {
+        this.style.cursor = "";
+    });
+
+    t6.addEventListener("mouseover", function () {
+        this.style.cursor = "pointer";
+    });
+
+    t6.addEventListener("mouseout", function () {
+        this.style.cursor = "";
+    });
+
+    t7.addEventListener("mouseover", function () {
+        this.style.cursor = "pointer";
+    });
+
+    t7.addEventListener("mouseout", function () {
+        this.style.cursor = "";
+    });
+
+    t8.addEventListener("mouseover", function () {
+        this.style.cursor = "pointer";
+    });
+
+    t8.addEventListener("mouseout", function () {
+        this.style.cursor = "";
+    });
+
+
+
+    const sliderContainer = document.querySelector('.background-img');
+    const thumbnails = document.querySelectorAll('.draw1');
+    const textContainers = document.querySelectorAll('.a');
+
+    const autoPlayInterval = 5000; // 定义自动播放间隔，单位毫秒
+    let autoPlayTimer; // 定义变量存放自动播放计时器
+
+
+    // 根据当前大图展示的位置，更新小图长度和阴影
+    const updateThumbnail = (position) => {
+        const targetWidth = 237.13; // 目标宽度
+        const targetHeight = 127.89; // 目标高度
+        const duration = 200; // 动画持续时间，单位为毫秒
+
+        thumbnails.forEach((thumbnail, index) => {
+            const isActive = index === position;
+
+            if (isActive) {
+                thumbnail.style.transformOrigin = 'center center'; // 设置变形基点
+                const startTime = Date.now(); // 记录动画开始时间
+                const animate = () => {
+                    const deltaTime = Date.now() - startTime; // 计算动画已经执行的时间
+                    const progress = Math.min(deltaTime / duration, 1); // 计算动画进度（0-1之间）
+                    const scale = 1.0 + (1.2 - 1.0) * progress; // 根据进度计算当前比例
+                    thumbnail.style.transform = `scale(${scale})`;
+                    if (progress < 1) { // 如果还没达到目标缩放比例，就继续执行动画
+                        requestAnimationFrame(animate);
+                    }
+                };
+                requestAnimationFrame(animate); // 执行动画
+            } else {
+                thumbnail.style.transform = 'scale(1.0)';
+            }
+        });
+    };
+
+
+
+
+    // 将大图切换到指定位置（/1/2）
+    const slideTo = (position) => {
+        sliderContainer.style.transform = `translateX(-${position * 108}%)`;
+        updateThumbnail(position);
+    };
+
+    // 大图自动播放
+    // const autoPlay = () => {
+    //   const currentPosition = Array.from(thumbnails).findIndex(thumbnail => thumbnail.style.transform === 'scale(1.1)');
+    //   const nextPosition = (currentPosition + 1) % thumbnails.length;
+    //   slideTo(nextPosition);
+    //   autoPlayTimer = setTimeout(autoPlay, autoPlayInterval);
+    // };
+
+
+    const autoPlay = () => {
+        const currentPosition = Array.from(thumbnails).findIndex(thumbnail => thumbnail.style.transform === 'scale(1.2)');
+        const nextPosition = (currentPosition + 1) % thumbnails.length;
+        slideTo(nextPosition);
+        autoPlayTimer = setTimeout(autoPlay, autoPlayInterval);
+
+        // 获取当前展示图片的文本
+        //   const currentText = textContainers[nextPosition].innerText; 
+        //   // 修改an-1-2的文本内容
+        //   const an12 = document.querySelector('.an1-2');
+        //   an12.innerHTML = "niu";
+        //   an12.innerHTML = "ma";
+    };
+
+    // 监听小图鼠标接触事件，延迟一定时间后切换到对应的大图
+    thumbnails.forEach((thumbnail, index) => {
+        let timer;
+        thumbnail.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                slideTo(index);
+                clearTimeout(autoPlayTimer);
+                autoPlayTimer = setTimeout(autoPlay, autoPlayInterval);
+            }, 100); // 等待 100 毫秒后执行切换操作
+        });
+    });
+
+    // 开始自动播放
+    autoPlay();
+
+    const videoBox = document.querySelector('.video-box');
+    const videos = videoBox.querySelectorAll('video');
+    const thumbnailBox = document.querySelector('.thumbnail-box');
+    const thumbnailss = thumbnailBox.querySelectorAll('.thumbnail');
+    let currentVideoIndex = 0; // 当前视频索引
+
+    // 初始化，显示第一个视频，第一个缩略图
+    videos[0].style.display = 'block';
+    thumbnailss[0].classList.add('active');
+
+    // 点击缩略图切换视频
+    thumbnailss.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+            // 更新当前视频索引，并确保其在合理的范围内
+            currentVideoIndex = (index + videos.length) % videos.length;
+
+            // 隐藏非当前视频
+            videos.forEach((video, index) => {
+                if (index !== currentVideoIndex) {
+                    video.style.display = 'none';
+                }
+            });
+
+            // 显示当前视频
+            videos[currentVideoIndex].style.display = 'block';
+
+            // 更新缩略图状态
+            thumbnailss.forEach((thumbnail, index) => {
+                if (index === currentVideoIndex) {
+                    thumbnail.classList.add('active');
+                } else {
+                    thumbnail.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    let left = document.querySelector(".button-left")
+    let right = document.querySelector(".button-right")
+    let img = document.querySelectorAll(".img")
+    let images = document.querySelector(".images")
+    let index = 0
+    let time
+
+    function position() {
+        images.style.left = (index * -100) + "%"
+    }
+    function add() {
+        if (index >= img.length - 1) {
+            index = 0
+        } else {
+            index++
+        }
+    }
+    function desc() {
+        if (index < 1) {
+            index = img.length - 1
+        } else {
+            index--
+        }
+    }
+    function timer() {
+        time = setInterval(() => {
+            index++
+            desc()
+            add()
+            position()
+        }, 3000000)
+    }
+    left.addEventListener("click", () => {
+        desc()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    right.addEventListener("click", () => {
+        add()
+        position()
+        clearInterval(time)
+        timer()
+    })
+</script>
+
+<!-- 弹窗js -->
+<script src="../js/tanchuang1.js"></script>
+<!-- 搜索下拉效果 -->
+<script src="../js/searchdropdown.js"></script>
+<!-- 隐藏头部与显示 -->
+<script src="../js/headerhidden.js"></script>
+
+</html>

@@ -1,0 +1,230 @@
+.gamecartoon1{
+    position:absolute;
+    top: 60px;
+    left:390px;
+    width:220px;
+    height:220px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gamename1:hover + .gamecartoon1{
+    opacity: 1;
+}
+
+.gamecartoon2{
+    position:absolute;
+    top: 60px;
+    left:390px;
+    width:220px;
+    height:220px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gamename2:hover + .gamecartoon2{
+    opacity: 1;
+}
+
+.gamecartoon3{
+    position:absolute;
+    top: 60px;
+    left:390px;
+    width:220px;
+    height:220px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gamename3:hover + .gamecartoon3{
+    opacity: 1;
+}
+
+.gamecartoon4{
+    position:absolute;
+    top: 60px;
+    left:390px;
+    width:220px;
+    height:220px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gamename4:hover + .gamecartoon4{
+    opacity: 1;
+}
+
+.gamecartoon5{
+    position:absolute;
+    top: 60px;
+    left:390px;
+    width:220px;
+    height:220px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gamename5:hover + .gamecartoon5{
+    opacity: 1;
+}
+
+.gamecartoon6{
+    position:absolute;
+    top: 60px;
+    left:390px;
+    width:220px;
+    height:220px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gamename6:hover + .gamecartoon6{
+    opacity: 1;
+}
+
+.gamecartoon7{
+    position:absolute;
+    top: 60px;
+    left:390px;
+    width:220px;
+    height:220px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gamename7:hover + .gamecartoon7{
+    opacity: 1;
+}
+
+.manhuacartoon1{
+    position:absolute;
+    top: 30px;
+    left:500px;
+    width:160px;
+    height:210px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.manhuacartoon1 img{
+    width:160px;
+    height:210px;
+    border-radius: 10px;
+}
+
+.manhuaname1:hover + .manhuacartoon1{
+    opacity: 1;
+}
+
+.manhuacartoon2{
+    position:absolute;
+    top: 30px;
+    left:500px;
+    width:160px;
+    height:210px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.manhuacartoon2 img{
+    width:160px;
+    height:210px;
+    border-radius: 10px;
+}
+
+.manhuaname2:hover + .manhuacartoon2{
+    opacity: 1;
+}
+
+.manhuacartoon3{
+    position:absolute;
+    top: 30px;
+    left:500px;
+    width:160px;
+    height:210px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.manhuacartoon3 img{
+    width:160px;
+    height:210px;
+    border-radius: 10px;
+}
+
+.manhuaname3:hover + .manhuacartoon3{
+    opacity: 1;
+}
+
+.manhuacartoon4{
+    position:absolute;
+    top: 30px;
+    left:500px;
+    width:160px;
+    height:210px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.manhuacartoon4 img{
+    width:160px;
+    height:210px;
+    border-radius: 10px;
+}
+
+.manhuaname4:hover + .manhuacartoon4{
+    opacity: 1;
+}
+
+.manhuacartoon5{
+    position:absolute;
+    top: 30px;
+    left:500px;
+    width:160px;
+    height:210px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.manhuacartoon5 img{
+    width:160px;
+    height:210px;
+    border-radius: 10px;
+}
+
+.manhuaname5:hover + .manhuacartoon5{
+    opacity: 1;
+}
+
+.manhuacartoon6{
+    position:absolute;
+    top: 30px;
+    left:500px;
+    width:160px;
+    height:210px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.manhuacartoon6 img{
+    width:160px;
+    height:210px;
+    border-radius: 10px;
+}
+
+.manhuaname6:hover + .manhuacartoon6{
+    opacity: 1;
+}

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./label/iconfont.css">
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            margin: 0 auto;
+            /* background-color: #aaa; */
+        }
+        .wrapper1{
+            height: 228px;
+            width: fit-content;
+            margin: 0 auto 55px;
+        }
+        .change_img_card{
+            overflow: hidden;
+            margin: 0 auto 55px;
+            width: 548px;
+            height: 392px;
+        }
+        .body_top{
+            width: 1398px;
+            margin: 0 auto 55px;
+        }
+        .wrapper_right{
+            width: 1420px;
+            padding-left: 560px;
+        }
+        .video-card{
+            position: relative;
+            border-radius: 6px;
+            overflow: hidden;
+            /* border: 1px solid pink; */
+            width: 264px;
+            height: 224px;
+            display: inline-block;
+            margin: 0 8px;
+        }
+        .video-card img{
+            cursor: pointer;
+            border-radius: 6px;
+            width: 100%;
+            height: 148.4px;
+        }
+        .label_info{
+            display: block;
+            padding: 18px 10px 0;
+            color: white;
+            cursor: pointer;
+            background: linear-gradient(to top,#161616,transparent);
+            border-radius: 6px;
+            z-index: 1;
+            position: absolute;
+            top: 109px;
+            width: 100%;
+            height: 40px;
+            transition: opacity .4s ease-out;
+        }
+        .video-card img:hover+.label_info,.label_info:hover{
+            opacity: 0;
+        }
+        .quantity{
+            font-weight: normal;
+            font-size: 13px;
+            font-family: Microsoft YaHei;
+        }
+        .duration{
+            float: right;
+            font-size: 13px;
+        }
+        .video-card .content{
+            margin: 5px 16px 0 0 ;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all .4s;
+            cursor: pointer;
+        }
+        .content:hover{
+            color: #00ccff;
+        }
+        .host{
+            position: absolute;
+            bottom: 0;
+            width: fit-content;
+            height: 17.6px;
+            display: block;
+            cursor: pointer;
+        }
+        .text{
+            font-family: Microsoft YaHei;
+            margin-left: 5px;
+            font-size: 13px;
+            font-weight:500;
+            color: #a0a0a0;
+            float: left;
+            transition: all .5s;
+        }
+        .text:hover{
+            color: #00ccff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="body_top">
+            <div class="change_img_card" style="float: left;">
+                <div class="picbox" id="picbox">
+                    <img src="./images/轮播图/1.jpg" width="100%" height="100%">
+                    <img src="./images/轮播图/2.jpg" width="100%" height="100%">
+                    <img src="./images/轮播图/3.jpg" width="100%" height="100%">
+                    <img src="./images/轮播图/4.jpg" width="100%" height="100%">
+                    <img src="./images/轮播图/5.jpg" width="100%" height="100%">
+                    <img src="./images/轮播图/6.jpg" width="100%" height="100%">
+                    <img src="./images/轮播图/7.jpg" width="100%" height="100%">
+                    <img src="./images/轮播图/8.jpg" width="100%" height="100%">
+                    <img src="./images/轮播图/9.jpg" width="100%" height="100%">   
+                </div>
+                
+                <div class="bottom-box" id="bottomBox">
+                    <div class="linear"></div>
+                    <div class="left">
+                        <div class="title">b站独家策划持续更新中！一起来参加云上戛纳吧~</div>
+                        <div class="title">把中国文化带向世界</div>
+                        <div class="title">发布视频赢取大会员年卡！</div>
+                        <div class="title">用魔法打败魔法？不，用拳头！</div>
+                        <div class="title">发布动态图文获超值权益啦~</div>
+                        <div class="title">因为猫猫破坏力太强，就准备弃养？！</div>
+                        <div class="title">点击开启时光机大门>>></div>
+                        <div class="title">厅王之王S2百厅齐放</div>
+                        <div class="title">干杯吧，心愿所归的澎湃之旅！</div>
+                        
+                        <div class="dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button class="before"><</button>
+                        <button class="next">></button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var test = document.querySelector('.title')
+                var picBox = document.getElementById('picbox');
+                var slideWidth = picBox.offsetWidth;
+                var slideCount = picBox.children.length;
+                var totalWidth = slideWidth * slideCount;
+                // picBox.style.width = totalWidth +'px';
+                var currentIndex = 0;
+                var dots = document.querySelectorAll('.dot');
+                var beforeBtn = document.querySelector('.before');
+                var nextBtn = document.querySelector('.next');
+                var timer;
+                var titles = document.querySelectorAll('.title');
+                updateTitle(currentIndex);
+                var bottomBox = document.querySelector('.bottom-box');
+                var linearBox = document.querySelector('.linear');
+            
+                function slideTo(index) {
+                    picBox.style.transform = `translateX(-${index * slideWidth}px)`;
+                    currentIndex = index;
+                    updateDots();
+                    updateTitle(currentIndex);
+                    updateBackground(currentIndex);
+                }
+        
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % slideCount;
+                    slideTo(currentIndex);
+                }
+                
+                function previousSlide() {
+                    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                    slideTo(currentIndex);
+                }
+                
+                function updateDots() {
+                    for (var i = 0; i < dots.length; i++) {
+                    if (i === currentIndex) {
+                        dots[i].classList.add('active');
+                    } else {
+                        dots[i].classList.remove('active');
+                    }
+                    }
+                }
+                
+                function startSlide() {
+                    timer = setInterval(nextSlide, 3000);
+                }
+                
+                function stopSlide() {
+                    clearInterval(timer);
+                }
+
+                startSlide();
+                
+                beforeBtn.addEventListener('click', function() {
+                    stopSlide();
+                    previousSlide();
+                });
+                
+                nextBtn.addEventListener('click', function() {
+                    stopSlide();
+                    nextSlide();
+                });
+                
+                dots.forEach(function(dot, index) {
+                    dot.addEventListener('click', function() {
+                    stopSlide();
+                    slideTo(index);
+                    });
+                });
+                
+                var container = document.querySelector('.container');
+                container.addEventListener('mouseover', stopSlide);
+                container.addEventListener('mouseout', startSlide);
+
+                function updateTitle(index) {
+                    for (var i = 0; i < titles.length; i++) {
+                        if (i === index) {
+                            titles[i].style.display = 'block';
+                        } else {
+                            titles[i].style.display = 'none';
+                        }
+                    }
+                }
+                function updateBackground(index) {
+                    var colors = ['#1f160d', '#37282a', '#7a766b', '#345a33', '#738caf', '#433120', '#4e4231', '#423019', '#4e5b77'];
+                    var color = colors[index % colors.length];
+                    bottomBox.style.backgroundColor = color;
+                    
+                    var linearGradient = `linear-gradient(to top, ${color}, transparent)`;
+                    linearBox.style.background = linearGradient;
+                }
+
+
+                // 在页面加载完成后执行以下代码
+                window.addEventListener('DOMContentLoaded', function() {
+                    // 调用初始状态的背景颜色
+                    updateBackground(0);
+                });
+            </script>
+
+            <div class="wrapper_right" >
+                <div class="video-card" style="margin-bottom: 17px;">
+                    <img src="./images/video_pic/10.jpg">
+                    <div class="label_info">
+                        <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 14.9万</span></div>
+                        <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 375</span></div>
+                        <div class="duration">03:05</div>
+                    </div>
+                    <div class="content" title="纹身是你的自由，但别人歧视纹身是别人的自由！你自己的选择凭什么让别人为你买单呢！">纹身是你的自由，但别人歧视纹身是别人的自由！你自己的选择凭什么...</div>
+                    <div class="host">
+                        <div class="iconfont icon-UPzhu" style="font-size: 17px; color:#a0a0a0; float: left;"></div>
+                        <div class="text">奇闻观察 · 5-25</div>
+                    </div>
+                </div>
+                <div class="video-card" style="margin-bottom: 17px;">
+                    <img src="./images/video_pic/11.jpg">
+                    <div class="label_info">
+                        <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 173.3万</span></div>
+                        <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 3330</span></div>
+                        <div class="duration">06:25</div>
+                    </div>
+                    <div class="content">千万别让周杰伦唱这首！告诉你周杰伦演唱会的点歌禁忌！</div>
+                    <div class="host">
+                        <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                        <div class="text">晚安の周杰伦 · 5-20</div>
+                    </div>
+                </div>
+                <div class="video-card" style="margin-bottom: 17px;">
+                    <img src="./images/video_pic/12.jpg">
+                    <div class="label_info">
+                        <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 42.1万</span></div>
+                        <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 2220</span></div>
+                        <div class="duration">08:38</div>
+                    </div>
+                    <div class="content">【小暖你别后悔】做了女神6年舔狗，重来一世，你不舔了，她却急了</div>
+                    <div class="host">
+                        <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                        <div class="text">圆桌动漫 · 5-22</div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="./images/video_pic/13.jpg">
+                    <div class="label_info">
+                        <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 32.9万</span></div>
+                        <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 1905</span></div>
+                        <div class="duration"> 15:07</div>
+                    </div>
+                    <div class="content">球2前147分钟究竟埋藏了多少细节？《流浪地球2》全篇解析</div>
+                    <div class="host">
+                        <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                        <div class="text">利维坦mY · 5-19</div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="./images/video_pic/14.jpg">
+                    <div class="label_info">
+                        <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 75.6万</span></div>
+                        <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 2586</span></div>
+                        <div class="duration">10:08</div>
+                    </div>
+                    <div class="content" title="史无前例的绝版白给！！之前下架的绝版游戏如今直接限时白送了？！【本周steam史低游戏推荐】5.19-5.26">史无前例的绝版白给！！之前下架的绝版游戏如今直接限时白送了？！...</div>
+                    <div class="host">
+                        <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                        <div class="text">初夏ChuXXia · 5-25</div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="./images/video_pic/15.jpg">
+                    <div class="label_info">
+                        <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 105.2万</span></div>
+                        <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 4329</span></div>
+                        <div class="duration">07:13</div>
+                    </div>
+                    <div class="content">运气爆棚！中华虎凤蝶在我面前产卵！</div>
+                    <div class="host">
+                        <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                        <div class="text">无穷小亮的科普日常 · 21小时前</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="wrapper1">
+            <div class="video-card">
+                <img src="./images/video_pic/1.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 220.7万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 1566</span></div>
+                    <div class="duration"> 03:16</div>
+                </div>
+                <div class="content">最怕文盲玩说唱！“临时抱佛脚”都能火？周董：一个能打的都没有</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">音乐Fans小琼 · 5-18</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/2.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 240.1万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 986</span></div>
+                    <div class="duration"> 04:32</div>
+                </div>
+                <div class="content">【好活当赏】 鸡 裤 同 聋</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">自动鬼畜中的WZ · 5-14</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/3.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 1.1亿</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 77283</span></div>
+                    <div class="duration"> 13:53</div>
+                </div>
+                <div class="content">这只狗...让我笑了一天一夜</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">爆笑揪揪歌 · 5-17</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/4.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 78.5万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 989</span></div>
+                    <div class="duration"> 05:11</div>
+                </div>
+                <div class="content">《玫瑰花的葬礼》当年听这首歌的都毕业了吧</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">九三的耳朵不是特别好 · 5-20</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/5.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 220.7万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 1566</span></div>
+                    <div class="duration"> 03:16</div>
+                </div>
+                <div class="content">你已经是一个合格的小只因了</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">好听的好听名字 · 5-20</div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper1">
+            <div class="video-card">
+                <img src="./images/video_pic/6.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 136.7万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 2433</span></div>
+                    <div class="duration"> 07:45</div>
+                </div>
+                <div class="content">幼儿园着火了，我实在救不过来，把小孩子踹下楼犯法吗？</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">张三普法 · 5-16</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/7.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 22.5万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 785</span></div>
+                    <div class="duration"> 03:55</div>
+                </div>
+                <div class="content">《轻轻敲碎沉睡的心灵》</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">龙馍馍 · 5-9</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/8.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 191.2万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 2135</span></div>
+                    <div class="duration"> 04:33</div>
+                </div>
+                <div class="content">我也就看了几十遍，和cheems一起动起来</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">废柴cheems · 5-16</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/9.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 341.7万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 1566</span></div>
+                    <div class="duration"> 03:16</div>
+                </div>
+                <div class="content">2023“新洗脑神曲”，每一首都火的离谱，BGM一响自动跟唱</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">下饭音乐 · 5-23</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/16.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 32.6万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 1308</span></div>
+                    <div class="duration"> 03:16</div>
+                </div>
+                <div class="content">“此后如竟没有火炬，我便是唯一的光。”【鲁迅】</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">柠檬驿站- · 5-12</div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper1">
+            <div class="video-card">
+                <img src="./images/video_pic/17.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 28.1万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 887</span></div>
+                    <div class="duration"> 07:39</div>
+                </div>
+                <div class="content">【4K修复】一切恐惧都来源于活力不足，电影里的火力压制超燃场面</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">4K超清修复馆 · 5-25</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/18.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 11.7万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 455</span></div>
+                    <div class="duration"> 01:44</div>
+                </div>
+                <div class="content">古代士兵每天都吃饭，为啥一打仗偏偏就缺粮</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">魔时艺术 · 5-27</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/19.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 66.3万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 6974</span></div>
+                    <div class="duration"> 24:15</div>
+                </div>
+                <div class="content">土著人一个愚蠢的制度 却值得全人类学习！【思维实验室】</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">思维实验室 · 5-27</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/20.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 191万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 1.5万</span></div>
+                    <div class="duration"> 09:55</div>
+                </div>
+                <div class="content">科技和狠活！抗日神剧主角把体温降到0℃打鬼子？离谱！</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">文西与阿漆 · 5-24</div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="./images/video_pic/21.jpg">
+                <div class="label_info">
+                    <div class="iconfont icon-bofang" style="float: left; font-size: 14px;"><span class="quantity"> 22.5万</span></div>
+                    <div class="iconfont icon-pinglun" style="float: left; margin-left: 13px;"><span class="quantity"> 454</span></div>
+                    <div class="duration"> 05:06</div>
+                </div>
+                <div class="content">香港电影中最嚣张的反派乌鸦张耀扬，从未学过电影，却能一战成名</div>
+                <div class="host">
+                    <div class="iconfont icon-UPzhu" style="font-size: 17px; color: #a0a0a0; float: left;"></div>
+                    <div class="text">非凡武林 · 5-22</div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

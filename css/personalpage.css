@@ -1,0 +1,20 @@
+.out{
+    width:1920px;
+    height: 65px;
+}
+
+.personbody{
+    width: 1285px;
+    margin: 65px auto 0;
+}
+
+.personimgbg{
+    width:1285px;
+    height:185px;
+    background-color: pink;
+}
+
+.personimgbg img{
+    width: 1285px;
+    height: 185px;
+}
